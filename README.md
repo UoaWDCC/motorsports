@@ -1,8 +1,12 @@
-# blank
+# Welcome to Vroom WebApp #
+The goal of this project is build a modern, responsive platform for membership signup, secure login, and admin management.   
 
-blank
+[Project Info](https://wdcc.co.nz/projects/2025/vroom) 
 
-## Attributes
+## Getting Started
+Make sure to install node and yarn!
 
-- **Database**: mongodb
-- **Storage Adapter**: localDisk
+Use `yarn install` in root directory to install dependencies.
+Then you can use `yarn run dev` to run the app locally.
+
+Note: use the `.env.example` template to create your `.env` file in root directory.
