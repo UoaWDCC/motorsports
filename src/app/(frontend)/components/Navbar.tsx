@@ -8,6 +8,22 @@ export default function Navbar() {
       <Link href="/">
         <button>Home</button>
       </Link>
+
+      {/* Add more links here */}
+
+      {/* EventsPage   */}
+
+      {/* VolunteerPage   */}
+
+      {/* ExecsPage   */}
+
+      {/* Gallery Page   */}
+
+      {/* About us Page   */}
+
+      {/* Signup   */}
+
+      {/* Social media   */}
     </div>
   )
 }
