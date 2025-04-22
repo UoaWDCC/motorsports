@@ -24,6 +24,12 @@ export default function Navbar() {
       {/* Signup   */}
 
       {/* Social media   */}
+
+      {/*TODO: Add link to social media page*/}
+      {/*<Link href="/">*/}
+      <Link href="https://www.instagram.com/vroom_uoa/">
+        <button>Social Media</button>
+      </Link>
     </div>
   )
 }
