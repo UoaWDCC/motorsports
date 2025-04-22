@@ -18,6 +18,9 @@ export default function Navbar() {
       {/* ExecsPage   */}
 
       {/* Gallery Page   */}
+      <Link href="/gallery">
+        <button>Gallery</button>
+      </Link>
 
       {/* About us Page   */}
 
