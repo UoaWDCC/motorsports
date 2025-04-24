@@ -22,6 +22,9 @@ export default function Navbar() {
       {/* About us Page   */}
 
       {/* Signup   */}
+      <Link href="/signup">
+        <button>Sign Up</button>
+      </Link>
 
       {/* Social media   */}
     </div>
