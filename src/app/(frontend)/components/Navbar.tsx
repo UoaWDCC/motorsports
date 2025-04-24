@@ -13,7 +13,9 @@ export default function Navbar() {
 
       {/* EventsPage   */}
 
-      {/* VolunteerPage   */}
+      {<Link href="/volunteerPage">
+        <button>Volunteer</button>
+      </Link>}
 
       {/* ExecsPage   */}
 
