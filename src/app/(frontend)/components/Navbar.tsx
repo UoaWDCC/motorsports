@@ -13,8 +13,6 @@ export default function Navbar() {
         <button>Events</button>
       </Link>
 
-      {/* EventsPage   */}
-
       {/* VolunteerPage   */}
 
       {/* ExecsPage   */}
