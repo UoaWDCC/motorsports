@@ -19,7 +19,9 @@ export default function Navbar() {
 
       {/* Gallery Page   */}
 
-      {/* About us Page   */}
+      <Link href="/about-us">
+        <button>About Us</button>
+      </Link>
 
       {/* Signup   */}
 
