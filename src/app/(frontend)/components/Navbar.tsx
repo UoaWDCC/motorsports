@@ -9,9 +9,9 @@ export default function Navbar() {
         <button>Home</button>
       </Link>
 
-      {/* Add more links here */}
-
-      {/* EventsPage   */}
+      <Link href="/events">
+        <button>Events</button>
+      </Link>
 
       {/* VolunteerPage   */}
 
