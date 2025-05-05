@@ -13,14 +13,16 @@ export default function Navbar() {
         <button>Events</button>
       </Link>
 
-      {<Link href="/volunteerPage">
-        <button>Volunteer</button>
-      </Link>}
+      {
+        <Link href="/volunteers">
+          <button>Volunteer</button>
+        </Link>
+      }
 
       {/* ExecsPage   */}
       <Link href="/execs">
-      <button>Executives</button>
-    </Link>
+        <button>Executives</button>
+      </Link>
 
       {/* Gallery Page   */}
       <Link href="/gallery">
