@@ -10,7 +10,7 @@ html,body {
     height: 100vh;
     width: 100%; 
     overflow: hidden; 
-    background-color: #272727;
+    background-color: #272727;  /*background dark gray*/
 }
 
 .content-page h1 {
@@ -34,7 +34,7 @@ html,body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Full height to overlay the image */
+    height: 100%; /* Gradient overlays the whole image */
     background: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0.5) 40%, /* Semi-transparent black over the image */
