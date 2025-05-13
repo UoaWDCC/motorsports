@@ -6,8 +6,8 @@ export default function AboutUsPage() {
       <div className="background-image">
         <Image src="/images/20250412_094454.jpg" className="background-image" alt="About Us" fill />
         <div className="background-gradient"></div>
+        <h1>ABOUT US</h1>
       </div>
-      <h1>ABOUT US</h1>
     </div>
   )
 }
