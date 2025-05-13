@@ -1,9 +1,13 @@
-const AboutUsPage = () => {
+import '../styles.css'
+import Image from 'next/image'
+export default function AboutUsPage() {
   return (
-    <div>
-      About Us Contents
+    <div className="content-page">
+      <div className="background-image">
+        <Image src="/images/20250412_094454.jpg" className="background-image" alt="About Us" fill />
+        <div className="background-gradient"></div>
+      </div>
+      <h1>ABOUT US</h1>
     </div>
   )
 }
-
-export default AboutUsPage

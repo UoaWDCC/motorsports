@@ -1,1 +1,49 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.content-page {
+    height: 100vh; /* Makes the div take up the full viewport height */
+    width: 100%; 
+    overflow: hidden; /* Ensures content doesn't overflow */
+    background-color: #333;
+
+    
+}
+
+.content-page h1 {
+    
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    
+}
+
+.background-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Full height to overlay the image */
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5) 40%, /* Semi-transparent black over the image */
+        #333 100% /* Solid grey at the bottom */
+    );
+}
+
+.content-page h1,
+.navbar {
+    position: relative; /* Ensures they stay above the background layers */
+    z-index: 1; /* Places them above the gradient and image */
+}
 
