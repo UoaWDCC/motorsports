@@ -1,0 +1,49 @@
+
+.landing-screen{
+    position: relative;
+    width:100xw;
+}
+.landing-screen-container {
+  position: relative;
+  height: 1024px;
+  width: 100%;
+}
+
+.landing-screen-logo{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.landing-screen-text{
+    position: absolute;
+    max-width: 489px;
+    max-height: 389px;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    color:aliceblue;
+    font-family:Open Sans;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.landing-screen-social{
+    position: absolute;
+    max-width: 489px;
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    width: 100%; 
+    padding: 0 2rem;
+    z-index: 1;
+}
