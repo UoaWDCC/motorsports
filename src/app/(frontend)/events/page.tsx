@@ -1,6 +1,18 @@
 import React from 'react'
 
-export default function EventsPage() {
+export const UpcomingEventLimit = 3
+export const PreviousEventLimit = 2
+
+// Temp event object, will replace with a collection object once developed
+export type TEvent = {
+    id: number,
+    title: string,
+    info: string,
+    date: string,
+    location: string
+}
+
+const EventsPage = () => {
   return (
     <>
       <h1>Events Page </h1>
@@ -8,3 +20,5 @@ export default function EventsPage() {
     </>
   )
 }
+
+export default EventsPage

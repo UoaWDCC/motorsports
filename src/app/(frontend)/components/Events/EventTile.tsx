@@ -1,0 +1,29 @@
+import React, { ReactNode } from 'react'
+import { TEvent } from '../../events/page'
+import styles from '@/app/(frontend)/events/events.module.css'
+
+interface IEventTileProps {
+    event: TEvent
+}
+
+const EventTile = ({ event }: IEventTileProps): ReactNode => {
+  return (
+    <div className={ styles.EventTile }>
+      <img src="https://placehold.co/150x100" alt="Placeholder image" />
+      
+      <div className={ styles.EventTileGroup }>
+        <h4>{ event.date }</h4>
+        <h3>{ event.title }</h3>
+        <p className={ styles.EventTileInfo }>{ event.info }</p>
+        <p>{ event.location }</p>
+
+        <button className={ styles.EventTileView }>
+          <p>View</p>
+          <img style={{ width: '16px' }} src="/images/chevron_right.png" alt="Right Arrow" />
+        </button>
+      </div>
+    </div>
+  )
+}
+
+export default EventTile
