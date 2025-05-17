@@ -1,4 +1,7 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
+import styles from './events.module.css'
+import Header from '../components/Events/Header'
+import Events from '../components/Events/Events'
 
 export const UpcomingEventLimit = 3
 export const PreviousEventLimit = 2
@@ -26,13 +29,17 @@ export const EventData: TEvent[] = [
   { id: 9, title: 'Event 10', info: 'Postgraduate Research Showcase', date: 'Sat 26 Feb @ 11:00 AM', location: 'Science Building 302' }
 ];
 
-const EventsPage = () => {
+const EventPage = (): ReactNode => {
   return (
-    <>
-      <h1>Events Page </h1>
-      <p>Temporary Page Template for the Events Page!</p>
-    </>
+    <main className={ styles.EventMain }>
+      <Header text='events' />
+
+      <div className={ styles.EventBody }>
+        <Events type='upcoming' />
+        <Events type='previous' />
+      </div>
+    </main>
   )
 }
 
-export default EventsPage
+export default EventPage
