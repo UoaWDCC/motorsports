@@ -1,10 +1,28 @@
 .execsSection {
-    
+    background-color: #111;
+    padding: 30px 15%;
+}
+
+.execsSection:nth-child(even) {
+    background-color: transparent; /* No background for every second section */
 }
 
 .execsRow {
     justify-content: center;
     margin:auto;
     display: flex;
+    flex-wrap:wrap;
     gap:10px;
+}
+
+.execsCard {
+    flex: 1 1 calc(25% - 20px); /* Each card takes up 25% of the row minus the gap */
+    max-width: calc(25% - 20px);
+    text-align: center;
+    border-radius: 8px;
+    
+}
+
+.execsImage {
+    border-radius: 8px;
 }

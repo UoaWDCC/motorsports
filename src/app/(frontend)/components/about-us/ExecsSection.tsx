@@ -1,4 +1,6 @@
+import { assertValidExecutionArguments } from 'graphql/execution/execute'
 import styles from './aboutuscomponent.module.css'
+import Image from 'next/image'
 interface Exec {
   name: string
   role: string
@@ -15,11 +17,17 @@ export default function ExecsSection({ title, execs }: ExecsSectionProps) {
     <div className={styles.execsSection}>
       <h2 className={styles.execsSectionTitle}>MEET THE {title} TEAM</h2>
       <div className={styles.execsRow}>
-        {execs.map((exec, index) => (
+        {execs.map((exec: Exec, index) => (
           <div key={index} className={styles.execsCard}>
-            <img src={exec.image} alt={`${exec.name}'s photo`} className="exec-image" />
-            <h3 className="exec-name">{exec.name}</h3>
-            <p className="exec-role">{exec.role}</p>
+            <Image
+              src={exec.image}
+              alt={`${exec.name}'s photo`}
+              className={styles.execsImage}
+              width={140}
+              height={200}
+            />
+            <h3 className={styles.execName}>{exec.name}</h3>
+            <p className={styles.execRole}>{exec.role}</p>
           </div>
         ))}
       </div>
