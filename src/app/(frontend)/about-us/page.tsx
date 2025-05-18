@@ -67,9 +67,9 @@ export default function AboutUsPage() {
         </div>
       </div>
       <div>
-        <ExecsSection title="LEADERSHIP" execs={fakeExecs} />
-        <ExecsSection title="SOCIAL" execs={fakeExecs} />
-        <ExecsSection title="COMPETITIVE" execs={fakeExecs} />
+        <ExecsSection title="LEADERSHIP" execs={fakeExecs} titleColour="#0078BE" />
+        <ExecsSection title="SOCIAL" execs={fakeExecs} titleColour="#F2C01F" />
+        <ExecsSection title="COMPETITIVE" execs={fakeExecs} titleColour="#EB534A" />
       </div>
     </div>
   )
