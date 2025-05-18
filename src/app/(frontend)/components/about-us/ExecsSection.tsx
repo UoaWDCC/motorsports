@@ -1,5 +1,6 @@
 import styles from './aboutuscomponent.module.css'
-import Image from 'next/image'
+import ExecsCard from './ExecsCard'
+
 interface Exec {
   name: string
   role: string
@@ -21,17 +22,7 @@ export default function ExecsSection({ title, execs, titleColour }: ExecsSection
       <p>Bibendum malesuada. Aenean vitae arcu consectetur, interdum nulla vel, vehicula nisl.</p>
       <div className={styles.execsRow}>
         {execs.map((exec: Exec, index) => (
-          <div key={index} className={styles.execsCard}>
-            <Image
-              src={exec.image}
-              alt={`${exec.name}'s photo`}
-              className={styles.execsImage}
-              width={140}
-              height={200}
-            />
-            <h3 className={styles.execName}>{exec.name}</h3>
-            <p className={styles.execRole}>{exec.role}</p>
-          </div>
+          <ExecsCard exec={exec} index={index} key={index} />
         ))}
       </div>
     </div>
