@@ -1,15 +1,16 @@
+
+/* Todo: 
+ *  - media query at less than 500px to switch 
+ *    up EventTile styling 
+ */
+
+
+/* 
+ *    Main styling
+ */
+
 .EventMain {
   background-color: #272727;
-}
-
-.EventHeader {
-  background-image: 
-    url('/images/event_page_background_blur.png'), 
-    url('/images/event_page_background.png');
-  background-size: cover, cover;
-  background-position: bottom center, bottom center;
-  background-repeat: no-repeat, no-repeat;
-  text-align: center;
 }
 
 .EventBody {
@@ -21,6 +22,21 @@
   padding-bottom: 6em;
 }
 
+
+/* 
+ *    EventHeader styling
+ */
+
+.EventHeader {
+  background-image: 
+    url('/images/event_page_background_blur.png'), 
+    url('/images/event_page_background.png');
+  background-size: cover, cover;
+  background-position: bottom center, bottom center;
+  background-repeat: no-repeat, no-repeat;
+  text-align: center;
+}
+
 .EventHeader h1 {
   font-size: 64px;
   color: white;
@@ -28,12 +44,21 @@
   text-transform: uppercase;
 }
 
+
+/* 
+ *    Events styling
+ */
+
 .Events {
   width: 80%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.Events > div:first-of-type {
+.EventsHeader {
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,6 +67,16 @@
   text-transform: uppercase;
 }
 
+.EventsSubtitle {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+
+/* 
+ *    EventsList styling
+ */
+
 .EventsList {
   display: flex;
   flex-direction: column;
@@ -49,14 +84,55 @@
   gap: 1em;
 }
 
+
+/* 
+ *    EventTile styling
+ */
+
 .EventTile {
   display: flex;
+  justify-content: left;
+  align-items: center;
   position: relative;
   background-color: white;
   border-radius: 8px;
-  padding: 24px;
+  padding: 32px;
+  padding-right: 8px;
   gap: 2em;
   color: black;
+}
+
+.EventTileImage {
+  width: 40%;
+  height: 150px;
+  flex-shrink: 0;     
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.EventTileImage img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+.EventTileView {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  bottom: 2px;
+  right: 10px;
+  border: none;
+  background-color: transparent;
+}
+
+.EventTileGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .EventTileGroup > * {
@@ -78,16 +154,34 @@
 
 .EventTileInfo {
   text-transform: initial;
-  margin: 8px 0;
+  margin: 16px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 370px;
 }
 
-.EventTileView {
+
+/* 
+ *    LoadMore styling
+ */
+
+.LoadMore {
   display: flex;
-  justify-items: center;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: 2px;
-  right: 10px;
-  border: none;
-  background-color: white;
+
+  margin-top: 64px;
+}
+
+.LoadMoreText {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.LoadMoreChevron {
+  height: 12px;
 }

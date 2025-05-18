@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react'
 import styles from '@/app/(frontend)/events/events.module.css'
 import EventTile from './EventTile'
 import { EventData, PreviousEventLimit, UpcomingEventLimit } from '../../events/page'
+import LoadMore from './LoadMore'
 
 interface IEventsProps {
   type: string
@@ -13,14 +14,16 @@ const Events = ({ type }: IEventsProps): ReactNode => {
 
   return (
     <section className={ styles.Events}>
-      <div style={{ color: 'white' }}>
-        <p>{ title }</p>
+      <div className={ styles.EventsHeader}>
+        <p className={ styles.EventsSubtitle }>{ title }</p>
         { type === 'upcoming' && <img style={{ width: '24px'}} src='/images/calendar.png' alt='Calendar View Button' />}
        </div> 
         
       <div className={ styles.EventsList}>
         { EventData.slice(0, limit).map(event => <EventTile key={ event.id } event={ event } />) }
       </div>
+
+      { type === 'previous' && <LoadMore /> }
     </section>
   )
 }

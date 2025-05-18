@@ -9,7 +9,9 @@ interface IEventTileProps {
 const EventTile = ({ event }: IEventTileProps): ReactNode => {
   return (
     <div className={ styles.EventTile }>
-      <img src="https://placehold.co/150x100" alt="Placeholder image" />
+      <div className={ styles.EventTileImage}>
+        <img src="https://placehold.co/150x100" alt="Placeholder image" />
+      </div>
       
       <div className={ styles.EventTileGroup }>
         <h4>{ event.date }</h4>

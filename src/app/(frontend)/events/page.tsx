@@ -17,7 +17,7 @@ export type TEvent = {
 
 // Temp raw data
 export const EventData: TEvent[] = [
-  { id: 0, title: 'Event 1', info: 'Info about event 1', date: 'Tue 15 Feb @ 12:30 AM', location: '2nd Floor Kate Edgar' },
+  { id: 0, title: 'VROOM 2025 NEWS', info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus earum dolore itaque eos dolorem? Placeat amet vitae molestiae libero vero. Delectus earum dolore itaque eos dolorem? Placeat amet vitae molestiae libero vero. Delectus earum dolore itaque eos dolorem? Placeat amet vitae molestiae libero vero', date: 'Tue 15 Feb @ 12:30 AM', location: '2nd Floor Kate Edgar' },
   { id: 1, title: 'Event 2', info: 'Info about event 2', date: 'Wed 16 Feb @ 2:00 PM', location: 'OGGB Room 260' },
   { id: 2, title: 'Event 3', info: 'Info about event 3', date: 'Thu 17 Feb @ 11:00 AM', location: 'Engineering Building 401' },
   { id: 3, title: 'Event 4', info: 'Info about event 4', date: 'Fri 18 Feb @ 1:30 PM', location: 'Kate Edgar Information Commons' },
