@@ -1,6 +1,18 @@
+import ExecsSection from '../components/about-us/ExecsSection'
 import '../styles.css'
 import Image from 'next/image'
 export default function AboutUsPage() {
+  const fakeExecs = [
+    { name: 'John Doe', role: 'President', image: '/images/about-us/placeholderExec.png' },
+    { name: 'John Smith', role: 'Treasurer', image: '/images/about-us/placeholderExec.png' },
+    { name: 'Jane Doe', role: 'Events Lead', image: '/images/about-us/placeholderExec.png' },
+    { name: 'Jane Smith', role: 'Marketing Lead', image: '/images/about-us/placeholderExec.png' },
+    { name: 'Jim Doe', role: 'Social Lead', image: '/images/about-us/placeholderExec.png' },
+    { name: 'Jill Smith', role: 'Events Team', image: '/images/about-us/placeholderExec.png' },
+    { name: 'Josh Doe', role: 'General Team', image: '/images/about-us/placeholderExec.png' },
+    // { name: 'Jo Smith', role: 'General Team', image: '/images/about-us/placeholderExec.png' },
+  ]
+
   return (
     <div className="content-page">
       {/*reusable across similar page styles*/}
@@ -53,6 +65,11 @@ export default function AboutUsPage() {
             />
           </div>
         </div>
+      </div>
+      <div>
+        <ExecsSection title="LEADERSHIP" execs={fakeExecs} titleColour="#0078BE" />
+        <ExecsSection title="SOCIAL" execs={fakeExecs} titleColour="#F2C01F" />
+        <ExecsSection title="COMPETITIVE" execs={fakeExecs} titleColour="#EB534A" />
       </div>
     </div>
   )
