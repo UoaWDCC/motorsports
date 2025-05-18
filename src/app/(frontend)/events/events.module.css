@@ -94,8 +94,7 @@
 
 .EventTile {
   display: flex;
-  justify-content: left;
-  align-items: center;
+  align-items: start;
   position: relative;
   background-color: white;
   border-radius: 8px;
@@ -137,8 +136,10 @@
 .EventTileGroup {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  height: 100%;
 }
+
 
 .EventTileGroup > * {
   margin: 0;
@@ -150,7 +151,8 @@
 .EventTileGroup h3 {
   font-size: 20px;
   letter-spacing: 1px;
-  margin: 8px 0
+  margin: 0;
+  margin-top: 8px;
 }
 
 .EventTileGroup h4 {

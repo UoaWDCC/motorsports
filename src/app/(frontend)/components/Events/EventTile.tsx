@@ -10,7 +10,7 @@ const EventTile = ({ event }: IEventTileProps): ReactNode => {
   return (
     <div className={ styles.EventTile }>
       <div className={ styles.EventTileImage}>
-        <img src="https://placehold.co/150x100" alt="Placeholder image" />
+        <img src="images/vroom_news.png" alt="Placeholder image" />
       </div>
       
       <div className={ styles.EventTileGroup }>
