@@ -1,0 +1,93 @@
+.EventMain {
+  background-color: #272727;
+}
+
+.EventHeader {
+  background-image: 
+    url('/images/event_page_background_blur.png'), 
+    url('/images/event_page_background.png');
+  background-size: cover, cover;
+  background-position: bottom center, bottom center;
+  background-repeat: no-repeat, no-repeat;
+  text-align: center;
+}
+
+.EventBody {
+  margin: auto;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+  padding-bottom: 6em;
+}
+
+.EventHeader h1 {
+  font-size: 64px;
+  color: white;
+  padding: 4em 0;
+  text-transform: uppercase;
+}
+
+.Events {
+  width: 80%;
+  margin: auto;
+}
+
+.Events > div:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.EventsList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.EventTile {
+  display: flex;
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  gap: 2em;
+  color: black;
+}
+
+.EventTileGroup > * {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.EventTileGroup h3 {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 8px 0
+}
+
+.EventTileGroup h4 {
+  font-size: 10px;
+}
+
+.EventTileInfo {
+  text-transform: initial;
+  margin: 8px 0;
+}
+
+.EventTileView {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  bottom: 2px;
+  right: 10px;
+  border: none;
+  background-color: white;
+}
