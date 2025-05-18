@@ -16,7 +16,7 @@ const Events = ({ type }: IEventsProps): ReactNode => {
     <section className={ styles.Events}>
       <div className={ styles.EventsHeader}>
         <p className={ styles.EventsSubtitle }>{ title }</p>
-        { type === 'upcoming' && <img style={{ width: '24px'}} src='/images/calendar.png' alt='Calendar View Button' />}
+        { type === 'upcoming' && <img style={{ cursor: 'pointer', width: '24px'}} src='/images/calendar.png' alt='Calendar View Button' />}
        </div> 
         
       <div className={ styles.EventsList}>

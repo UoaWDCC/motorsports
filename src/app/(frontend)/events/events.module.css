@@ -35,12 +35,14 @@
   background-position: bottom center, bottom center;
   background-repeat: no-repeat, no-repeat;
   text-align: center;
+  z-index: -1;
 }
 
 .EventHeader h1 {
   font-size: 64px;
   color: white;
-  padding: 4em 0;
+  padding: 3.5em 0;
+  margin: 1px;
   text-transform: uppercase;
 }
 
@@ -50,7 +52,7 @@
  */
 
 .Events {
-  width: 80%;
+  width: 70%;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -64,6 +66,7 @@
   align-items: center;
   width: 100%;
   margin-bottom: 4px;
+  font-size: 18px;
   text-transform: uppercase;
 }
 
@@ -81,7 +84,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1em;
+  gap: 1.5em;
 }
 
 
@@ -110,6 +113,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .EventTileImage img {
@@ -127,6 +131,7 @@
   right: 10px;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .EventTileGroup {
@@ -174,14 +179,15 @@
   align-items: center;
 
   margin-top: 64px;
+  cursor: pointer;
 }
 
 .LoadMoreText {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
 }
 
 .LoadMoreChevron {
-  height: 12px;
+  height: 10px;
 }
