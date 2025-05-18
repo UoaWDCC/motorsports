@@ -1,0 +1,10 @@
+.execsSection {
+    
+}
+
+.execsRow {
+    justify-content: center;
+    margin:auto;
+    display: flex;
+    gap:10px;
+}

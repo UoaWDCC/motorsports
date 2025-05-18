@@ -1,6 +1,13 @@
+import ExecsSection from '../components/about-us/ExecsSection'
 import '../styles.css'
 import Image from 'next/image'
 export default function AboutUsPage() {
+  const fakeExecs = [
+    { name: 'John Doe', role: 'President', image: '/images/about-us/placeholderExec.png' },
+    { name: 'John Smith', role: 'Treasurer', image: '/images/about-us/placeholderExec.png' },
+    { name: 'Jane Doe', role: 'Events Lead', image: '/images/about-us/placeholderExec.png' },
+  ]
+
   return (
     <div className="content-page">
       {/*reusable across similar page styles*/}
@@ -52,6 +59,9 @@ export default function AboutUsPage() {
               fill
             />
           </div>
+        </div>
+        <div>
+          <ExecsSection title="LEADERSHIP" execs={fakeExecs} />
         </div>
       </div>
     </div>
