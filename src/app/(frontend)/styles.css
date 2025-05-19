@@ -93,7 +93,7 @@ html,body {
     /* height: 1080px;
     width: 1000px; */
     display:flex;
-    width: 70%;
+    width: 1007px;
     background-color:#fff;
     color:#000;
     margin:auto;
@@ -102,7 +102,7 @@ html,body {
 }
 .event-details-content {
     display: flex; /* Ensures the content is positioned correctly */
-    width:90%;
+    width:86.6%;
     margin: 0 auto; /*Centers the content*/
     color:#000;
 }
@@ -127,4 +127,15 @@ html,body {
 .event-details-content h3{
     font-size: 16px;
     font-weight: normal;
+}
+.event-details-content h4{
+    display: flex;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+.event-details-line{
+    height:4px;
+    width:824px;
+    background-color:#E2E2E2;
 }
