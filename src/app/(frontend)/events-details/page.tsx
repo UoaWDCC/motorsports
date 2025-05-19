@@ -45,10 +45,18 @@ export default function EventDetailsPage() {
               </h3>
               <a
                 style={{ display: 'inline-block', marginTop: '4rem', marginBottom: '3rem' }}
-                href="https://www.google.com"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeNOzbSG3_NEg7f2MI6gHIZT--DYf1WDyWIqf--vKpQTaUi5w/viewform?usp=dialog"
               >
                 Click for form.
               </a>
+              <div className="google-form">
+                <iframe
+                  className="google-form"
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSeNOzbSG3_NEg7f2MI6gHIZT--DYf1WDyWIqf--vKpQTaUi5w/viewform?embedded=true"
+                >
+                  Loading…
+                </iframe>
+              </div>
             </div>
           </div>
         </div>
