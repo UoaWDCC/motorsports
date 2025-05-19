@@ -15,8 +15,8 @@ export default function ConditionalLink( {href, children}:ConditionalLinkProps )
         );
     }
     return (
-        <span>
+        <>
             {children}
-        </span>
+        </>
     );
 }

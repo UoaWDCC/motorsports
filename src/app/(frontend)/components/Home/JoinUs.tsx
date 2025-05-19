@@ -1,4 +1,4 @@
-import './Home.css';
+import './JoinUs.css';
 import react from 'react';
 import JoinUsText from './JoinUsText';
 import ImageDisplay from './ImageDisplay';
@@ -28,7 +28,7 @@ export default function JoinUs(){
                 </div>
 
                 <div className="joinus-right">
-                    <ImageDisplay linkUrl={image_details.linkUrl} imageUrl={image_details.imageUrl} alt={image_details.alt} classname="medium-image"/>
+                    <ImageDisplay linkUrl={image_details.linkUrl} imageUrl={image_details.imageUrl} alt={image_details.alt}/>
                 </div>
             </div>
         </section>

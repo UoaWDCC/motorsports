@@ -1,13 +1,21 @@
 import react from 'react';
+import './Volunteer.css';
+import VolunteerBlock from './VolunteerBlock';
 
 
 export default function Volunteer(){
     return(
-        <div className="volunteer">
-            <h1>
-                Welcome volunteer
-            </h1>
-
-        </div>
+        <section className="volunteer-section">
+            <div className='volunteer-container'>
+                <div className='volunteer-header'>
+                    <div className='volunteer-title'>Volunteering</div>
+                </div>
+                <div>
+                    <VolunteerBlock />
+                </div>
+                <div className='volunteer-header'>
+                </div>
+            </div>
+        </section>
     );
 }

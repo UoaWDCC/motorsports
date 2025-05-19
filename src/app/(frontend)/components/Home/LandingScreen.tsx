@@ -36,6 +36,13 @@ export default function LandingScreen() {
         <div className='landing-screen-social'>
             <SocialComponent socialMedia={socialMedia}/>
         </div>
+        <div className='landing-screen-more'>
+            <span>FIND OUT MORE</span> 
+            <div className='landing-screen-arrow'>
+                <ImageDisplay linkUrl="" imageUrl="images/down-arrow.png" alt=""/>
+            </div>
+            
+        </div>
     </section>
   );
 }

@@ -3,6 +3,7 @@ import Events from './components/Home/Events';
 import JoinUs from './components/Home/JoinUs';
 import LandingScreen from './components/Home/LandingScreen'; 
 import Volunteer from './components/Home/Volunteer';
+import Sponsors from './components/Home/Sponsors';
 import './styles.css'
 
 export default async function HomePage() {
@@ -13,6 +14,7 @@ export default async function HomePage() {
       <JoinUs />
       <Events />
       <Volunteer />
+      <Sponsors />
     </div>
   )
 }

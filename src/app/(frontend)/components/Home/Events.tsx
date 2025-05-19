@@ -35,11 +35,13 @@ export default function Events(){
     ];
     return(
         <section className="events-section">
-            <div className='events-header'>
-                <text>EVENTS</text>
-            </div>
             <div className='events-container'>
-                <EventsBlocks events={events}/>
+                <div className='events-header'>
+                    <div className='events-title'>EVENTS</div>
+                </div>
+                <div className='events-body'>
+                    <EventsBlocks events={events}/>
+                </div>
             </div>
         </section>
     );
