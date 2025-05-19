@@ -1,4 +1,5 @@
 import PhotoGalleryGrid from '../components/PhotoGalleryGrid'
+import Image from 'next/image'
 
 const testAlbums = [
   {
@@ -43,8 +44,14 @@ const testAlbums = [
 
 export default function GalleryPage() {
   return (
-    <div>
-      <h1>Welcome to Gallery Content</h1>
+    <div className="content-page">
+      {/*reusable across similar page styles*/}
+      <div className="background-image">
+        <Image src="/images/20250412_094454.jpg" className="background-image" alt="About Us" fill />
+        <div className="background-gradient" />
+        <h1>GALLLERY</h1>
+      </div>
+
       {testAlbums.map((album, index) => (
         <PhotoGalleryGrid name={album.name} images={album.images} key={index} />
       ))}
