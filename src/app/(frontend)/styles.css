@@ -79,14 +79,19 @@ html,body {
 .content {
     display: flex; /* Ensures the content is positioned correctly */
     flex-direction: column;
-    width:80%;
+    width: 1007px;
     margin: 0 auto; /* Centers the content */
 }
 
 .event-details-back{
     display:flex;
-    width: 70%;
-    margin:auto;
+    text-decoration:none;
+    margin:0;
+    font-size:32px;
+    color:#fff;
+    margin-top: 1rem; 
+    margin-bottom: 1rem;
+
 }
 
 .event-details-tile {
@@ -105,42 +110,45 @@ html,body {
     width:86.6%;
     margin: 0 auto; /*Centers the content*/
     color:#000;
+    font-family: 'Open Sans', sans-serif;
 }
-
-.event-details-headers{
-}
-.event-details-content h1{
+.event-details-content h2{
     display: flex;
     font-size: 40px;
     font-weight: bold;
-    margin: 0 auto;
 }
 
-.event-details-content h1 p{
-    font-size: 16px;
-}
-
-.event-details-content h2{
-    font-size: 16px;
-    font-weight: normal;
-}
 .event-details-content h3{
     font-size: 16px;
     font-weight: normal;
+    display: inline-block;
+    margin-top: 3rem;
 }
+
 .event-details-content h4{
     display: flex;
     font-size: 32px;
     font-weight: bold;
     margin: 0 auto;
+    margin-top: 3rem;
 }
+
 .event-details-line{
     height:4px;
     width:824px;
+    margin-top: 3rem; 
+    margin-left: 2rem;
     background-color:#E2E2E2;
 }
 
-.google-form{
-    width:640px; 
-    height:506px; 
+.event-details-form-line{
+    display: flex;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.event-details-form{
+    width:834px; 
+    height:510px; 
 }

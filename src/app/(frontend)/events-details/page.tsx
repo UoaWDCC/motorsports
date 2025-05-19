@@ -20,43 +20,38 @@ export default function EventDetailsPage() {
       {/*customised content for the page*/}
       <div className="content">
         <div className="event-details-back">
-          <Link href="/events">
-            <button>Back</button>
+          <Link href="/events" className="event-details-back">
+            BACK
           </Link>
         </div>
         <div className="event-details-tile">
           <div className="event-details-content">
-            <div className="event-details-headers">
-              <h2 style={{ display: 'inline-block' }}>TUE 15 FEB @ 12:30AM</h2>
-              <h2 style={{ display: 'inline-block', marginLeft: '4rem' }}>2ND FLOOR KATE EDGAR</h2>
-              <h1>VROOM 2025 NEWS</h1>
-              <h3>Morbi molestie bibendum malesuada. Aenean vitae arcu consectetur.</h3>
-              <div
-                style={{ display: 'inline-block', marginTop: '2rem', marginLeft: '2rem' }}
-                className="event-details-line"
-              ></div>
-              <h4 style={{ display: 'inline-block', marginTop: '3rem' }}>VROOM 2025 NEWS</h4>
-              <h3>
+            <div>
+              <h3>TUE 15 FEB @ 12:30AM</h3>
+              <h3 style={{ marginLeft: '4rem' }}>2ND FLOOR KATE EDGAR</h3>
+              <h2>VROOM 2025 NEWS</h2>
+              <p>Morbi molestie bibendum malesuada. Aenean vitae arcu consectetur.</p>
+              <div className="event-details-line"></div>
+              <h4>VROOM 2025 NEWS</h4>
+              <p>
                 Morbi molestie bibendum malesuada. Aenean vitae arcu consectetur. Morbi molestie
                 bibendum malesuada. Aenean vitae arcu consectetur. Morbi molestie bibendum
                 malesuada. Aenean vitae arcu consectetur.Morbi molestie bibendum malesuada. Aenean
                 vitae arcu consectetur.Morbi molestie bibendum malesuada. Aenean vitae arcu
                 consectetur.Morbi molestie bibendum malesuada.
-              </h3>
+              </p>
               <a
-                style={{ display: 'inline-block', marginTop: '4rem', marginBottom: '3rem' }}
+                className="event-details-form-line"
                 href="https://docs.google.com/forms/d/e/1FAIpQLSeNOzbSG3_NEg7f2MI6gHIZT--DYf1WDyWIqf--vKpQTaUi5w/viewform?usp=dialog"
               >
                 Click for form.
               </a>
-              <div className="google-form">
-                <iframe
-                  className="google-form"
-                  src="https://docs.google.com/forms/d/e/1FAIpQLSeNOzbSG3_NEg7f2MI6gHIZT--DYf1WDyWIqf--vKpQTaUi5w/viewform?embedded=true"
-                >
-                  Loading…
-                </iframe>
-              </div>
+              <iframe
+                className="event-details-form"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSeNOzbSG3_NEg7f2MI6gHIZT--DYf1WDyWIqf--vKpQTaUi5w/viewform?embedded=true"
+              >
+                Loading…
+              </iframe>
             </div>
           </div>
         </div>
