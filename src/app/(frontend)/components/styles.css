@@ -1,9 +1,25 @@
-.navbar{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
-.navbar button{
-    display: block;
-    margin: auto;
+.navbar button {
+  display: block;
+  margin: auto;
+}
+
+.gallery-grid {
+  column-count: 3;
+  column-gap: 0.5rem;
+}
+
+.gallery-grid-item {
+  margin-bottom: 0.2rem;
+}
+
+/*Gallery Grid Breakpoint*/
+@media (min-width: 1024px) {
+  .gallery-grid {
+    column-count: 5;
+  }
 }
