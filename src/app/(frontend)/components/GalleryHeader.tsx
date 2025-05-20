@@ -5,7 +5,7 @@ export default function GalleryHeader() {
   return (
     <div className="albums-header-section">
       <div className="albums-header-row">
-        <h2>Photo Albums</h2>
+        <h2>PHOTO ALBUMS</h2>
         <p>
           Morbi molestie bibendum malesuada. Aenean vitae arcu consectetur, interdum nulla vel,
           vehicula nisl.
