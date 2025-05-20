@@ -1,14 +1,51 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
-.navbar{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+.navbar {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  padding-left: 100px;
+  gap: 10px;
+  background-color: #111111;
+  height: 66px;
 }
-.navbar button{
-    display: block;
-    margin: auto;
+.nav-button {
+
+  justify-items: center;
+  display: flex;
+  height: 22px;
+  align-items: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  
+}
+
+.nav-home {
+  color: white;
+}
+
+.nav-button-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav-login {
+  display:flex;
+  align-items: center;
+  height: 22px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+
 }
