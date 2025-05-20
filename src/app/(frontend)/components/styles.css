@@ -26,3 +26,19 @@
     column-count: 6;
   }
 }
+
+.albums-header-section h2,
+.albums-header-section h3 {
+  margin-top: 0;
+}
+
+.albums-header-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 90px;
+}
+
+.albums-header-row h3 {
+  font-style: italic;
+}
