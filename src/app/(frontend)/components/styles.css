@@ -5,7 +5,6 @@ body {
   height: 100%;
 }
 .navbar {
-  font-family: 'Arial', sans-serif;
   display: flex;
   padding-left: 100px;
   gap: 10px;
@@ -39,13 +38,26 @@ body {
 }
 
 .nav-login {
-  display:flex;
-  align-items: center;
   height: 22px;
-  border: none;
   background: none;
   cursor: pointer;
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
+  padding-right: 90px;
 
+}
+
+.nav-login-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  padding-left: 70px;
+}
+
+.logo{
+  display: block;
+  transform: rotate(4.8deg);
+  padding-right: 20px;
 }
