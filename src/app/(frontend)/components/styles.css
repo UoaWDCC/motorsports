@@ -12,7 +12,6 @@ body {
   height: 66px;
 }
 .nav-button {
-
   justify-items: center;
   display: flex;
   height: 22px;
@@ -22,7 +21,6 @@ body {
   cursor: pointer;
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  
 }
 
 .nav-home {
@@ -44,7 +42,6 @@ body {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   padding-right: 90px;
-
 }
 
 .nav-login-container {
@@ -56,8 +53,41 @@ body {
   padding-left: 70px;
 }
 
-.logo{
+.logo {
   display: block;
   transform: rotate(4.8deg);
   padding-right: 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 132.96px;
+  width: 100%;
+  background-color: rgba(242, 192, 31, 1);
+}
+
+.footer-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 100px;
+}
+
+.foot-button {
+  justify-items: center;
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  font-size: 16;
+}
+
+.arrow-image-container {
+  position: absolute;
+  right: 40px;
 }
