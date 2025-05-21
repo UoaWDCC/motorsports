@@ -6,7 +6,7 @@ import './styles.css'
 export default function Navbar() {
   const showExtraButtons = false // This hides the extra buttons we added initially.
   return (
-    <div className="navbarContainer">
+    <div id="navbar" className="navbarContainer">
         
       <div className="navbar">
         <Link href="/">

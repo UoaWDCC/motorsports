@@ -1,7 +1,9 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import './styles.css'
+import ScrollToNavbarButton from './ScrollButton'
 
 export default function Footer() {
   return (
@@ -35,15 +37,7 @@ export default function Footer() {
           SIGN UP
         </Link>
         <div className="arrow-image-container">
-            <Link href="/">
-          <Image
-            src="/images/logo.png"
-            alt="Arrow"
-            className="arrow-image"
-            width={80}
-            height={75.47}
-          />
-          </Link>
+          <ScrollToNavbarButton />
         </div>
       </div>
     </div>
