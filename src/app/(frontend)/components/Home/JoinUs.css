@@ -34,6 +34,8 @@
     text-align: right;
     margin: 0 auto;
     overflow: hidden;
+    transform: rotate(3deg);
+    transform-origin: center;
 }
 
 .joinus-right img {
