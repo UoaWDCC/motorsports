@@ -57,7 +57,7 @@ export default function Navbar() {
           )}
         </div>
         <div className="nav-login-container">
-        <Link href="/login" className="nav-login">
+        <Link href="/" className="nav-login"> {/*Links to the home page as a placeholder for the future login button*/}
           LOGIN
         </Link>
         </div>

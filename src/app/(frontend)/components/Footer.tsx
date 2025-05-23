@@ -25,7 +25,7 @@ export default function Footer() {
           ABOUT US
         </Link>
 
-        <Link href="/login" className="foot-button">
+        <Link href="/" className="foot-button">
           LOGIN
         </Link>
 
