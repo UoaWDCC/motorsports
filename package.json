@@ -20,11 +20,13 @@
     "@payloadcms/payload-cloud": "latest",
     "@payloadcms/richtext-lexical": "latest",
     "cross-env": "^7.0.3",
+    "framer-motion": "^12.12.1",
     "graphql": "^16.8.1",
     "next": "15.2.3",
     "payload": "latest",
     "react": "19.0.0",
     "react-dom": "19.0.0",
+    "react-scroll": "^1.9.3",
     "sharp": "0.32.6"
   },
   "devDependencies": {

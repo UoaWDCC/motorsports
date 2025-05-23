@@ -1,0 +1,64 @@
+.joinus {
+  display: flex;
+  background-color: black;
+  color: white;
+  width: 100%;
+  min-height: 698px;
+  min-width: 780px;
+  justify-content: center;
+  align-items: center; 
+}
+
+.joinus-container {
+  display: flex;
+  width: 70%;
+  height: 80%;
+  max-width: 1440px;
+}
+
+.joinus-left {
+  flex: 1 1 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+}
+.joinus-right {
+    flex: 1 1 50%;  
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    margin: 0 auto;
+    overflow: hidden;
+    transform: rotate(3deg);
+    transform-origin: center;
+}
+
+.joinus-right img {
+  max-width: 90%;
+  height: auto;
+  display: block;
+}
+
+.join-us-text {
+  width: 85%;
+}
+
+.join-us-button-div {
+  padding-top: 2rem;
+  padding-bottom: 0;
+  align-items: left;
+}
+
+.join-now-button {
+  background-color: white;
+  color: black;
+  width: 100px;
+  height: 40px;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
