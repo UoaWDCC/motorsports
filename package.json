@@ -25,6 +25,7 @@
     "next": "15.2.3",
     "payload": "latest",
     "react": "19.0.0",
+    "react-big-calendar": "^1.18.0",
     "react-dom": "19.0.0",
     "react-scroll": "^1.9.3",
     "sharp": "0.32.6"
