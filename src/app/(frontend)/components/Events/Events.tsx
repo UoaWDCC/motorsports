@@ -1,12 +1,15 @@
 import React, { ReactNode } from 'react'
 import styles from './events.module.css'
 import EventTile from './EventTile'
-import { EventData, PreviousEventLimit, UpcomingEventLimit } from '../../events/page'
+import { EventData } from '../../events/page'
 import LoadMore from './LoadMore'
 
 interface IEventsProps {
   type: string
 }
+
+const UpcomingEventLimit = 3
+const PreviousEventLimit = 2
 
 const Events = ({ type }: IEventsProps): ReactNode => {
   const title = type === 'upcoming' ? 'Upcoming Events' : 'Previous Events'

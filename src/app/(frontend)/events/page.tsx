@@ -7,9 +7,6 @@ import styles from '../components/Events/events.module.css'
 import Header from '../components/Events/Header'
 import Events from '../components/Events/Events'
 
-export const UpcomingEventLimit = 3
-export const PreviousEventLimit = 2
-
 // Temp event object, will replace with a collection object once developed
 export type TEvent = {
   id: number
