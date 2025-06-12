@@ -1,0 +1,36 @@
+.small-image {
+  min-width: 32px;
+  min-height: 32px;
+  max-width: 32px;
+  max-height: 32px;
+  height: auto;
+  display: block;
+}
+.medium-image {
+  min-width: 489px;
+  min-height: 389px;
+  /* max-width: 489px;
+  max-height: 389px; */
+  height: auto;
+  display: block;
+}
+
+.medium-large-image {
+  min-width: 500px;
+  min-height: 500px;
+  max-width: 500px;
+  max-height: 500px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.fullscreen-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.dark-image {
+  filter: brightness(60%);
+}
