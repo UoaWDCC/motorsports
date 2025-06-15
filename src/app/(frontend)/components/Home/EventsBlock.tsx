@@ -1,21 +1,6 @@
 import "./Events.css"
 import ImageDisplay from "./ImageDisplay";
-interface EventItem {
-    id: string;
-    title: string;
-    text: string;
-    imageUrl: string;
-    linkUrl: string;
-}
-
-interface EventItemProps {
-    eventItem: EventItem;  
-    index: number;
-}
-
-interface EventsBlockProps {
-    events: EventItem[];
-}
+import { EventItemProps, EventsBlockProps } from "../../types/events";
 
 export function EventsBlock({ eventItem, index }: EventItemProps) {
     const isEven = index % 2 === 0;
@@ -29,7 +14,7 @@ export function EventsBlock({ eventItem, index }: EventItemProps) {
 
                 <div className="grid-item-text">
                     <a href={eventItem.linkUrl}><p className="grid-item-text-title">{eventItem.title}</p></a>
-                    <p className="grid-item-text-description">{eventItem.text}</p>
+                    <p className="grid-item-text-description">{eventItem.info}</p>
                 </div>
             </div>
         </div>

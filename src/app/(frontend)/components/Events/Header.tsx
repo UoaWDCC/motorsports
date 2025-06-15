@@ -1,9 +1,6 @@
 import React, { ReactNode } from 'react'
 import styles from './events.module.css'
-
-interface IHeaderProps {
-  text: string
-}
+import { IHeaderProps } from '../../types/events'
 
 const Header = ({ text }: IHeaderProps): ReactNode => {
   return (
