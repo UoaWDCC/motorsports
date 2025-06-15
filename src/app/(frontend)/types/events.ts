@@ -1,6 +1,6 @@
 // Temp event object, will replace with a collection object once developed
 export type TEvent = {
-  id: string | number
+  id: string
   title: string
   info: string
   dateStart: string
