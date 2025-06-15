@@ -1,17 +1,6 @@
 import styles from './aboutuscomponent.module.css'
 import ExecsCard from './ExecsCard'
-
-interface Exec {
-  name: string
-  role: string
-  image: string // URL for the exec's image
-}
-
-interface ExecsSectionProps {
-  title: string // Title of the section (e.g., sub-team name)
-  execs: Exec[] // List of execs
-  titleColour?: string
-}
+import { Exec, ExecsSectionProps } from '../../types/aboutus'
 
 export default function ExecsSection({ title, execs, titleColour }: ExecsSectionProps) {
   return (

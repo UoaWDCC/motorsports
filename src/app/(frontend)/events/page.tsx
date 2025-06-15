@@ -6,75 +6,20 @@ import MyCalendar from '@/app/(frontend)/components/event-components/MyCalendar'
 import styles from '../components/Events/events.module.css'
 import Header from '../components/Events/Header'
 import Events from '../components/Events/Events'
+import { eventData } from '../data/events'
+import { CalendarEvent } from '../types/events'
 
-// Temp event object, will replace with a collection object once developed
-export type TEvent = {
-  id: number
-  title: string
-  info: string
-  date: string
-  location: string
-}
-
-// Temp raw data
-export const EventData: TEvent[] = [
-  {
-    id: 0,
-    title: 'VROOM 2025 NEWS',
-    info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus earum dolore itaque eos dolorem? Placeat amet vitae molestiae libero vero. Delectus earum dolore itaque eos dolorem? Placeat amet vitae molestiae libero vero. Delectus earum dolore itaque eos dolorem? Placeat amet vitae molestiae libero vero',
-    date: 'Tue 15 Feb @ 12:30 AM',
-    location: '2nd Floor Kate Edgar',
-  },
-  {
-    id: 1,
-    title: 'Event 2',
-    info: 'Info about event 2',
-    date: 'Wed 16 Feb @ 2:00 PM',
-    location: 'OGGB Room 260',
-  },
-  {
-    id: 2,
-    title: 'Event 3',
-    info: 'Info about event 3',
-    date: 'Thu 17 Feb @ 11:00 AM',
-    location: 'Engineering Building 401',
-  },
-  {
-    id: 3,
-    title: 'Event 4',
-    info: 'Info about event 4',
-    date: 'Fri 18 Feb @ 1:30 PM',
-    location: 'Kate Edgar Information Commons',
-  },
-]
 
 export default function EventsPage() {
   const [showCalendar, setShowCalendar] = useState(false)
 
-  /*Sample data to test events on the calendar*/
-  const events = [
-    {
-      start: new Date(),
-      end: new Date(),
-      title: 'Sample Event',
-    },
-    {
-      start: new Date('2025-05-22T00:00:00'),
-      end: new Date('2025-05-22T01:00:00'),
-      title: 'Sim Racing',
-    },
-    {
-      start: new Date('2025-05-25T00:00:00'),
-      end: new Date('2025-05-25T01:00:00'),
-      title: 'Social Event',
-    },
-    {
-      start: new Date('2025-05-27T00:00:00'),
-      end: new Date('2025-05-27T01:00:00'),
-      title: 'Club Dinner',
-    },
-  ]
+  const calendarData: CalendarEvent[] = eventData.map(event => ({
+        start: new Date(event.dateStart),
+        end: new Date(event.dateEnd),
+        title: event.title,
+      }))
 
+  /*Sample data to test events on the calendar*/
   return (
     <div>
       <button
@@ -94,7 +39,7 @@ export default function EventsPage() {
       </button>
       {showCalendar && (
         <div className="calendar-wrapper">
-          <MyCalendar events={events} />
+          <MyCalendar events={calendarData} />
         </div>
       )}
 

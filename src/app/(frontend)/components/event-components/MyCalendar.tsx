@@ -1,20 +1,12 @@
 import React, { useState } from 'react'
 import { Calendar, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
+import { MyCalendarProps } from '../../types/events'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import './style.css'
 
 const localizer = momentLocalizer(moment)
 
-interface CalendarEvent {
-  start: Date
-  end: Date
-  title: string
-}
-
-interface MyCalendarProps {
-  events: CalendarEvent[]
-}
 
 /*To get rid of the "Today," "Back", "Next" and other view options 
 that come default with the component.*/
@@ -36,7 +28,7 @@ export default function MyCalendar({ events }: MyCalendarProps) {
         <div className="calendar-container">
         <Calendar
             date={currentDate}
-            onNavigate={(newDate) => setCurrentDate(newDate)}
+            onNavigate={(newDate: Date) => setCurrentDate(newDate)}
             localizer={localizer}
             events={events}
             startAccessor="start"
@@ -50,4 +42,4 @@ export default function MyCalendar({ events }: MyCalendarProps) {
         />
         </div>
     )
-    }
+}

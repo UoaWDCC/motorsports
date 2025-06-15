@@ -19,7 +19,7 @@ export default function LandingScreen() {
         { imageUrl: "/images/linkedin.png", linkUrl: "https://linkedin.com/" },
         { imageUrl: "/images/facebook.png", linkUrl: "https://www.facebook.com/" },
         { imageUrl: "/images/twitch.png", linkUrl: "https://twitter.com/" },
-]
+    ]
     const somwWord = "For Motor-sport and Car/ Bike Culture fans and newcomers alike.".toUpperCase();
 
   return (

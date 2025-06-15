@@ -1,8 +1,9 @@
 import PhotoGalleryGrid from '../components/PhotoGalleryGrid'
 import GalleryHeader from '../components/GalleryHeader'
+import { GalleryAlbum } from '../types/gallery'
 import Image from 'next/image'
 
-const testAlbums = [
+const testAlbums: GalleryAlbum[] = [
   {
     name: '2025 VROOM HAVE A GO DAY',
     images: [

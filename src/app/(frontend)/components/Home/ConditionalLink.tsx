@@ -1,9 +1,6 @@
 import Link from "next/link";
+import {ConditionalLinkProps } from "../../types/home";
 
-interface ConditionalLinkProps {
-  href: string;
-  children: React.ReactNode;
-}
 
 export default function ConditionalLink( {href, children}:ConditionalLinkProps ) {
   // This component is responsible for displaying a link or span

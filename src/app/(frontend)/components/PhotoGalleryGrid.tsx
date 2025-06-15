@@ -1,13 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
+import { GalleryAlbum } from '../types/gallery'
 import './styles.css'
 
-interface albumType {
-  name: string
-  images: string[]
-}
-
-export default function PhotoGalleryGrid(props: albumType) {
+export default function PhotoGalleryGrid(props: GalleryAlbum) {
   return (
     <>
       <h3>{props.name}</h3>

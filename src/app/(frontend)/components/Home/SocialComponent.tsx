@@ -1,12 +1,6 @@
 import ImageDisplay from "./ImageDisplay";
-interface SocialItem {
-    imageUrl: string;
-    linkUrl: string;
-}
-interface SocialComponentProps {
-    socialMedia: SocialItem[];
-}
-export default function SocialComponent( { socialMedia }:SocialComponentProps) {
+import { SocialItem } from "../../types/home";
+export default function SocialComponent( { socialMedia }: { socialMedia: SocialItem[] }) {
 
     return (
         <>
