@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react"
+
 // Temp event object, will replace with a collection object once developed
 export type TEvent = {
   id: string
@@ -17,6 +19,13 @@ export interface CalendarEvent {
 
 export interface MyCalendarProps {
   events: CalendarEvent[]
+  showCalendar: boolean
+  setShowCalendar: Dispatch<SetStateAction<boolean>>
+}
+
+export interface EventListViewProps {
+  showCalendar: boolean
+  setShowCalendar: Dispatch<SetStateAction<boolean>>
 }
 
 export interface EventItem {
@@ -38,6 +47,8 @@ export interface EventsBlockProps {
 
 export interface IEventsProps {
   type: string
+  showCalendar: boolean
+  setShowCalendar: Dispatch<SetStateAction<boolean>>
 }
 
 export interface IEventTileProps {

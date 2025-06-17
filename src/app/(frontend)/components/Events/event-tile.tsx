@@ -2,8 +2,6 @@ import React, { ReactNode } from 'react'
 import { IEventTileProps } from '../../types/events'
 import styles from './events.module.css'
 
-
-
 const EventTile = ({ event }: IEventTileProps): ReactNode => {
   return (
     <div className={styles.EventTile}>
