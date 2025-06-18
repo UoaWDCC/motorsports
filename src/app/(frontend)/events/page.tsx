@@ -2,9 +2,9 @@
 
 import { eventData } from '../data/events'
 import { CalendarEvent } from '../types/events'
-import EventListView from '../components/events/event-list-view'
+import EventListView from '../components/Events/event-list-view'
 import { useState } from 'react'
-import MyCalendar from '../components/events/my-calendar'
+import MyCalendar from '../components/Events/my-calendar'
 
 export default function EventsPage() {
   const [showCalendar, setShowCalendar] = useState(false)
@@ -17,11 +17,15 @@ export default function EventsPage() {
 
   return (
     <main>
-      { showCalendar ? 
-        <MyCalendar showCalendar={ showCalendar } setShowCalendar={ setShowCalendar } events={ calendarData }/> 
-      : 
-        <EventListView showCalendar={ showCalendar } setShowCalendar={ setShowCalendar } /> 
-      }
+      {showCalendar ? (
+        <MyCalendar
+          showCalendar={showCalendar}
+          setShowCalendar={setShowCalendar}
+          events={calendarData}
+        />
+      ) : (
+        <EventListView showCalendar={showCalendar} setShowCalendar={setShowCalendar} />
+      )}
     </main>
   )
 }
