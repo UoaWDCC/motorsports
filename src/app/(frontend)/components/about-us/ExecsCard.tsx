@@ -1,11 +1,6 @@
 import Image from 'next/image'
 import styles from './aboutuscomponent.module.css'
-
-interface Exec {
-  name: string
-  role: string
-  image: string // URL for the exec's image
-}
+import { Exec } from '../../types/aboutus'
 
 export default function ExecsCard({ exec, index }: { exec: Exec; index: number }) {
   return (

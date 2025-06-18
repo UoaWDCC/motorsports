@@ -1,10 +1,3 @@
-
-/* Todo: 
- *  - media query at less than 500px to switch 
- *    up EventTile styling 
- */
-
-
 /* 
  *    Main styling
  */
@@ -42,7 +35,7 @@
   font-size: 64px;
   color: white;
   padding: 3.5em 0;
-  margin: 1px;
+  margin: 0;
   text-transform: uppercase;
   letter-spacing: .05em;
 }
