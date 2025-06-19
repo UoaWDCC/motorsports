@@ -4,13 +4,14 @@
 }
 .landing-screen-container {
   position: relative;
-  height: 1024px;
+  /* height: 1024px; */
   width: 100%;
+  aspect-ratio: 4 / 3;
 }
 
 .landing-screen-logo{
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -27,7 +28,8 @@
     text-align: center;
     font-weight: bold;
     color:white;
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: clamp(8px, 2.5vw, 20px);
     z-index: 1;
 }
 
@@ -58,7 +60,7 @@
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 20px;
+    font-size: clamp(8px, 2.5vw, 20px);
     cursor: default;
 }
 
