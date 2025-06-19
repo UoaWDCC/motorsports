@@ -10,10 +10,8 @@ export default function Volunteer(){
                 <div className='volunteer-header'>
                     <div className='volunteer-title'>Volunteering</div>
                 </div>
-                <div>
+                <div className='volunteer-body'>
                     <VolunteerBlock />
-                </div>
-                <div className='volunteer-header'>
                 </div>
             </div>
         </section>

@@ -7,7 +7,7 @@ export default function LandingScreen() {
     const image_details = {
         imageUrl: "/images/header.jpg",
         alt: "Join Us",
-        linkUrl: "/"
+        linkUrl: ""
     };
     const logo_image_details = {
         imageUrl: "/images/logo.png",
