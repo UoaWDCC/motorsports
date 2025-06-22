@@ -1,7 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
-import { GalleryAlbum } from '../types/gallery'
-import './styles.css'
+import { GalleryAlbum } from '../../types/gallery'
+import LoadMore from '../Events/load-more'
+import './Gallery.css'
 
 export default function PhotoGalleryGrid(props: GalleryAlbum) {
   return (
