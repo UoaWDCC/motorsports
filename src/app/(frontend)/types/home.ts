@@ -1,6 +1,7 @@
 export interface SocialItem {
     imageUrl: string;
     linkUrl: string;
+    classname: string;
 }
 // interface SocialComponentProps {
 //     socialMedia: SocialItem[];
