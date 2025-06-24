@@ -47,7 +47,7 @@
 }
 
 .landing-screen-more{
-    width: 100%;;
+    width: 165px;
     position: absolute;
     top: 85%;
     display: flex;
@@ -56,15 +56,44 @@
     justify-content: center;
     text-align: center;
     color: white;
+    text-decoration: none;
     font-weight: bold;
     font-size: 20px;
+    cursor: default;
+}
+
+.landing-screen-more-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    cursor: default;
 }
 .landing-screen-arrow{
     margin-top: 20px;
-    max-width: 32px;;
+    max-width: 32px;
+}
+
+.landing-screen-more-words{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: white; 
+    padding-bottom: 10px;
+}
+
+.more-link{
+    text-decoration: none;
+    color: white;
 }
 
 .landing-screen-arrow img{
     width: 100%;
     height: auto;
 }
+
+.instagram{
+    height: 40px;
+}
+

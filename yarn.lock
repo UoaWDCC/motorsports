@@ -5574,10 +5574,10 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-big-calendar@^1.18.0:
-  version "1.19.3"
-  resolved "https://registry.npmjs.org/react-big-calendar/-/react-big-calendar-1.19.3.tgz"
-  integrity sha512-+P/9X54QxvBcbJhtyxSBoXEj3enSXSxJw76RWlP8IUhHUQQREpwdzld0dcJpfDTvp8c/aFzzKx7KZjZtiOusdA==
+react-big-calendar@^1.19.4:
+  version "1.19.4"
+  resolved "https://registry.yarnpkg.com/react-big-calendar/-/react-big-calendar-1.19.4.tgz#a1f00f4cb817a7e210a8137bbabf5726c032d2da"
+  integrity sha512-FrvbDx2LF6JAWFD96LU1jjloppC5OgIvMYUYIPzAw5Aq+ArYFPxAjLqXc4DyxfsQDN0TJTMuS/BIbcSB7Pg0YA==
   dependencies:
     "@babel/runtime" "^7.20.7"
     clsx "^1.2.1"

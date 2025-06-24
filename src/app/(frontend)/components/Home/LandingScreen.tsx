@@ -2,6 +2,7 @@ import react from 'react';
 import ImageDisplay from './ImageDisplay';
 import SocialComponent from './SocialComponent';
 import "./LandingScreen.css"
+import ScrollDownButton from './ScrollButtonLanding';
 
 export default function LandingScreen() {
     const image_details = {
@@ -15,10 +16,11 @@ export default function LandingScreen() {
         linkUrl: ""
     };
     const socialMedia = [
-        { imageUrl: "/images/instagram.png", linkUrl: "https://www.instagram.com/" },
-        { imageUrl: "/images/linkedin.png", linkUrl: "https://linkedin.com/" },
-        { imageUrl: "/images/facebook.png", linkUrl: "https://www.facebook.com/" },
-        { imageUrl: "/images/twitch.png", linkUrl: "https://twitter.com/" },
+        { imageUrl: "/images/instagram.png", linkUrl: "https://www.instagram.com/vroom_uoa/", classname: "instagram" },
+        { imageUrl: "/images/tiktok.png", linkUrl: "https://www.tiktok.com/@vroomuoa", classname: "tiktok" },
+        { imageUrl: "/images/facebook.png", linkUrl: "https://www.facebook.com/VroomUoA/", classname: "facebook" },
+        { imageUrl: "/images/twitch.png", linkUrl: "https://www.twitch.tv/vroom_uoa", classname: "twitch" },
+        { imageUrl: "/images/discord.png", linkUrl: "https://discord.gg/FuXRhXSh6F", classname: "discord" },
     ]
     const somwWord = "For Motor-sport and Car/ Bike Culture fans and newcomers alike.".toUpperCase();
 
@@ -36,13 +38,7 @@ export default function LandingScreen() {
         <div className='landing-screen-social'>
             <SocialComponent socialMedia={socialMedia}/>
         </div>
-        <div className='landing-screen-more'>
-            <span>FIND OUT MORE</span> 
-            <div className='landing-screen-arrow'>
-                <ImageDisplay linkUrl="" imageUrl="images/down-arrow.png" alt=""/>
-            </div>
-            
-        </div>
+        <ScrollDownButton/>
     </section>
   );
 }

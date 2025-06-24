@@ -1,5 +1,6 @@
 import ImageDisplay from "./ImageDisplay";
 import { SocialItem } from "../../types/home";
+import { it } from "node:test";
 export default function SocialComponent( { socialMedia }: { socialMedia: SocialItem[] }) {
 
     return (
@@ -9,7 +10,7 @@ export default function SocialComponent( { socialMedia }: { socialMedia: SocialI
                     key={index}
                     imageUrl={item.imageUrl}
                     linkUrl={item.linkUrl}
-                    classname="small-image "
+                    classname={`${item.classname} small-image`}
                 />
             )): ""}
         </>
