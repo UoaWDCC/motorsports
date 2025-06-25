@@ -80,15 +80,13 @@
 .join-now-button {
   background-color: white;
   color: black;
-  width: 25%;
   font-size: clamp(12px, 1.1vw, 14px);
-  height: 80%;
   border-radius: 0.8rem;
   cursor: pointer;
   max-width: 100px;
   max-height: 50px;;
-  min-width: 80px;
-  min-height: 20px;
+  min-width: 100px;
+  min-height: 50px;
   margin-bottom: 20px;;
 }
 

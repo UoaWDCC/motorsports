@@ -19,19 +19,21 @@ export default function JoinUs() {
   return (
     <section className="joinus" id="JoinUs">
       <div className="joinus-container">
-        <div className="joinus-left">
-          <JoinUsText htmlContent={content} />
-          <div className="join-us-button-div">
-            <button className="join-now-button">JOIN NOW</button>
+        <div className='joinus-content'>  
+          <div className="joinus-left">
+            <JoinUsText htmlContent={content} />
+            <div className="join-us-button-div">
+              <button className="join-now-button">JOIN NOW</button>
+            </div>
           </div>
-        </div>
 
-        <div className="joinus-right">
-          <ImageDisplay
-            linkUrl={image_details.linkUrl}
-            imageUrl={image_details.imageUrl}
-            alt={image_details.alt}
-          />
+          <div className="joinus-right">
+            <ImageDisplay
+              linkUrl={image_details.linkUrl}
+              imageUrl={image_details.imageUrl}
+              alt={image_details.alt}
+            />
+          </div>
         </div>
       </div>
     </section>
