@@ -23,7 +23,6 @@
 .joinus-content {
   display: flex;
   width: 100%;
-  /* padding-top: 20%; */
   height: 50%;
   flex-direction: row;
   align-items: center;
@@ -67,7 +66,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: clamp(8px, 1.1vw, 18px);
+  font-size: clamp(12px, 1.1vw, 18px);
 }
 
 .join-us-button-div {
@@ -82,12 +81,49 @@
   background-color: white;
   color: black;
   width: 25%;
-  font-size: clamp(6px, 1.1vw, 14px);
+  font-size: clamp(12px, 1.1vw, 14px);
   height: 80%;
   border-radius: 0.8rem;
   cursor: pointer;
   max-width: 100px;
   max-height: 50px;;
-  min-width: 50px;
+  min-width: 80px;
   min-height: 20px;
+  margin-bottom: 20px;;
+}
+
+@media (max-width: 768px) {
+  .joinus-content {
+    flex-direction: column;
+  }
+
+  .join-us-text {
+    width: 100%;
+  }
+  .joinus-left{
+    width: 100%;
+    text-align: left;
+  }
+  .joinus-right {
+    width: 100%;
+    flex: 1 1 100%;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+  }
+
+  .join-now-button {
+    width: 50%;
+    max-width: 100px;
+  }
+  .joinus-right img {
+    max-width: 100%;
+  }
+
+  .joinus-container {
+    aspect-ratio: auto;
+    width: 70%;
+    height: auto;
+    padding: 2rem 0;
+  }
 }

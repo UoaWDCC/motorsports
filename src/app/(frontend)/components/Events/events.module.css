@@ -162,7 +162,7 @@
   max-width: 370px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 768px) {
   .EventTile {
     flex-direction: column;
     padding-right: 32px;
