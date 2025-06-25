@@ -1,3 +1,63 @@
+
+/* Slide-in mobile menu */
+@media (min-width: 731px) {
+  .burger.closed {
+    display: none
+  }
+}
+
+@media (max-width: 730px) {
+  .burger {
+    display: flex;
+  }
+
+  .burger span {
+    opacity: 1;
+  }
+
+  .nav-button-container {
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: #222;
+    padding: 2rem 1rem;
+    transition: right 0.3s ease;
+  }
+
+  .nav-button-container.active {
+    right: 0;
+  }
+
+  .nav-button {
+    margin: 1rem 0;
+    color: white;
+    text-decoration: none;
+  }
+
+  .nav-login-container {
+    display: none;
+  }
+
+  .menu-overlay {
+    position: fixed;
+    inset: 0;
+    /* background: rgba(0, 0, 0, 0.5); */
+    /* z-index: 999; */
+  }
+
+  .navbar-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 html,
 body {
   margin: 0;
@@ -7,15 +67,55 @@ body {
 .navbar {
   display: flex;
   padding-left: 100px;
+  padding-right: 100px;
   gap: 10px;
   background-color: #111111;
   height: 66px;
   justify-content: center;
-
+  align-items: center;
+  position: relative;
 }
 .navbar button {
   display: block;
   margin: auto;
+}
+
+.navbar-items {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Burger button */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  overflow: visible;
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  margin-bottom: 2px;
+  width: 16px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.burger.open {
+  position: fixed;
+  top: 50px;
+  right: 50px;
 }
 
 .gallery-grid {
