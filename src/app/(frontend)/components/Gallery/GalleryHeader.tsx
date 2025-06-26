@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles.css'
+import './Gallery.css'
 
 export default function GalleryHeader() {
   return (
