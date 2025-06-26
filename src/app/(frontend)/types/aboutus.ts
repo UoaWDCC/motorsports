@@ -9,3 +9,10 @@ export interface ExecsSectionProps {
   execs: Exec[] // List of execs
   titleColour?: string
 }
+
+export interface DescriptionProps {
+  title: string // Title of the description
+  subtitle: string // Subtitle of the description
+  content: string // Content of the description
+  image: string // URL for the image
+}

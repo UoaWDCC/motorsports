@@ -1,31 +1,30 @@
 .sponsors-section {
     background-color:#272727;
     width: 100%;
-    min-height: 500px;
-    min-width: 780px;
 }
 
 .sponsors-container{   
     width: 70%;
     margin: 0 auto;
     max-width: 1440px;
+    aspect-ratio: 4 / 3;
 }
 .sponsors-header {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    min-height: 200px;
+    height: 25%;
     position: relative;
+    font-size: clamp(8px, 2.5vw, 24px);
 }
 
 .sponsors-body{
-    min-height: 300px;
+    height: 75%;
 }
 
 .sponsors-title{
     margin: 0;
     padding-bottom: 20px;
-    font-size: 24px;
     font-weight: bold;
     color: white;
     text-transform: uppercase;
