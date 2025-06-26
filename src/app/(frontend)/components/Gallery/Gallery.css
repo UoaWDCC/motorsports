@@ -13,7 +13,7 @@
 /*Gallery Grid Breakpoint*/
 @media (min-width: 1024px) {
   .gallery-grid {
-    column-count: 6;
+    column-count: 5;
   }
 }
 
@@ -31,4 +31,28 @@
 
 .albums-header-row h3 {
   font-style: italic;
+}
+
+/* 
+ *    LoadMore styling
+ */
+
+.LoadMore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: -4rem;
+  margin-bottom: 5rem;
+}
+
+.LoadMoreText {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.LoadMoreChevron {
+  height: 10px;
 }
