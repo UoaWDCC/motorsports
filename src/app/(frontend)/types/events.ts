@@ -15,6 +15,7 @@ export interface CalendarEvent {
   start: Date
   end: Date
   title: string
+  id: string
 }
 
 export interface MyCalendarProps {

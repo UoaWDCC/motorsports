@@ -51,10 +51,7 @@ export default function MyCalendar({ events, showCalendar, setShowCalendar }: My
         style={{ height: 500 }}
         components={{ toolbar: CustomToolbar }}
         onSelectEvent={(event: { id: string }) => {
-          window.location.href = `/events-details/0`
-          {
-            /*${event.id}`*/
-          }
+          window.location.href = `/events-details/${event.id}`
         }}
       />
     </div>
