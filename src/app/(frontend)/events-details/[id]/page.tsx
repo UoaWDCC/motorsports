@@ -1,12 +1,16 @@
-import '../styles.css'
+import '../../styles.css'
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { eventData } from '../../data/events'
 
-import { eventData } from '../data/events'
+interface EventDetailsParams {
+  params: { id: string }
+}
+export default function EventDetailsPage({ params }: EventDetailsParams) {
+  const id = parseInt(params.id, 10)
+  const event = eventData[id]
 
-export default function EventDetailsPage() {
-  const event = eventData[0]
   const dateStart = new Date(event.dateStart).toLocaleString('en-US', {
     weekday: 'short',
     day: '2-digit',
@@ -14,6 +18,7 @@ export default function EventDetailsPage() {
     hour: '2-digit',
     minute: '2-digit',
   })
+
   return (
     <div className="content-page">
       {/*copied top header*/}
