@@ -15,26 +15,30 @@ export default function MyCalendar({ events, showCalendar, setShowCalendar }: My
   const CustomToolbar = (toolbar: any) => {
     const month = moment(toolbar.date).format('MMMM').toUpperCase()
     return (
-      <div className='custom-toolbar-container'>
-        <div className='custom-toolbar'>
-          <button className="nav-arrow" onClick={() => toolbar.onNavigate('PREV')}>&lt;</button>
+      <div className="custom-toolbar-container">
+        <div className="custom-toolbar">
+          <button className="nav-arrow" onClick={() => toolbar.onNavigate('PREV')}>
+            &lt;
+          </button>
           <span className="month-label">{month}</span>
-          <button className="nav-arrow" onClick={() => toolbar.onNavigate('NEXT')}>&gt;</button>
+          <button className="nav-arrow" onClick={() => toolbar.onNavigate('NEXT')}>
+            &gt;
+          </button>
         </div>
-        
-        { showCalendar &&
+
+        {showCalendar && (
           <img
             src="/images/calendar-icon.png"
             alt="Toggle Calendar View"
             onClick={() => setShowCalendar(!showCalendar)}
           />
-        }
+        )}
       </div>
     )
   }
-    
+
   return (
-    <div className="calendar-container">    
+    <div className="calendar-container">
       <Calendar
         date={currentDate}
         onNavigate={(newDate: Date) => setCurrentDate(newDate)}
@@ -46,6 +50,12 @@ export default function MyCalendar({ events, showCalendar, setShowCalendar }: My
         views={['month']}
         style={{ height: 500 }}
         components={{ toolbar: CustomToolbar }}
+        onSelectEvent={(event: { id: string }) => {
+          window.location.href = `/events-details/0`
+          {
+            /*${event.id}`*/
+          }
+        }}
       />
     </div>
   )

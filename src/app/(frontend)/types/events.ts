@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from "react"
+import { Dispatch, SetStateAction } from 'react'
 
 // Temp event object, will replace with a collection object once developed
 export type TEvent = {
@@ -29,20 +29,20 @@ export interface EventListViewProps {
 }
 
 export interface EventItem {
-    id: string;
-    title: string;
-    info: string;
-    imageUrl: string;
-    linkUrl: string;
+  id: string
+  title: string
+  info: string
+  imageUrl: string
+  linkUrl: string
 }
 
 export interface EventItemProps {
-    eventItem: EventItem;  
-    index: number;
+  eventItem: EventItem
+  index: number
 }
 
 export interface EventsBlockProps {
-    events: EventItem[];
+  events: EventItem[]
 }
 
 export interface IEventsProps {
