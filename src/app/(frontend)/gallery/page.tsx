@@ -1,5 +1,5 @@
-import PhotoGalleryGrid from '../components/PhotoGalleryGrid'
-import GalleryHeader from '../components/GalleryHeader'
+import PhotoGalleryGrid from '../components/Gallery/PhotoGalleryGrid'
+import GalleryHeader from '../components/Gallery/GalleryHeader'
 import { GalleryAlbum } from '../types/gallery'
 import Image from 'next/image'
 
