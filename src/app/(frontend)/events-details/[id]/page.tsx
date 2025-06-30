@@ -1,9 +1,24 @@
-import '../styles.css'
+import '../../styles.css'
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { eventData } from '../../data/events'
 
-export default function EventDetailsPage() {
+interface EventDetailsParams {
+  params: { id: string }
+}
+export default function EventDetailsPage({ params }: EventDetailsParams) {
+  const id = parseInt(params.id, 10)
+  const event = eventData[id]
+
+  const dateStart = new Date(event.dateStart).toLocaleString('en-US', {
+    weekday: 'short',
+    day: '2-digit',
+    month: 'short',
+    hour: '2-digit',
+    minute: '2-digit',
+  })
+
   return (
     <div className="content-page">
       {/*copied top header*/}
@@ -29,22 +44,16 @@ export default function EventDetailsPage() {
           <div className="event-details-tile">
             <div className="event-details-tile-content">
               <div>
-                <h2>TUE 15 FEB @ 12:30AM</h2>
-                <h2>2ND FLOOR KATE EDGAR</h2>
+                <h2>{dateStart}</h2>
+                <h2>{event.location}</h2>
                 <h3>
-                  VROOM 2025 NEWS
+                  {event.title}
                   <p>Morbi molestie bibendum malesuada. Aenean vitae arcu consectetur.</p>
                 </h3>
                 <div className="event-details-line"></div>
                 <h4>
-                  VROOM 2025 NEWS
-                  <p>
-                    Morbi molestie bibendum malesuada. Aenean vitae arcu consectetur. Morbi molestie
-                    bibendum malesuada. Aenean vitae arcu consectetur. Morbi molestie bibendum
-                    malesuada. Aenean vitae arcu consectetur. Morbi molestie bibendum malesuada.
-                    Aenean vitae arcu consectetur. Morbi molestie bibendum malesuada. Aenean vitae
-                    arcu consectetur. Morbi molestie bibendum malesuada.
-                  </p>
+                  {event.title}
+                  <p>{event.info}</p>
                 </h4>
                 <a
                   className="event-details-form-link"

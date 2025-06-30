@@ -13,6 +13,7 @@ export default function EventsPage() {
     start: new Date(event.dateStart),
     end: new Date(event.dateEnd),
     title: event.title,
+    id: event.id,
   }))
 
   return (
