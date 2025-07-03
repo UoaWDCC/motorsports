@@ -9,7 +9,7 @@ import MyCalendar from '../components/Events/my-calendar'
 export default function EventsPage() {
   const [showCalendar, setShowCalendar] = useState(false)
 
-  const calendarData: CalendarEvent[] = eventData.map((event) => ({
+  const calendarData = eventData.map((event) => ({
     start: new Date(event.dateStart),
     end: new Date(event.dateEnd),
     title: event.title,

@@ -7,7 +7,7 @@ import { eventData } from '../../data/events'
 interface EventDetailsParams {
   params: { id: string }
 }
-export default function EventDetailsPage({ params }: EventDetailsParams) {
+export default function EventDetailsPage(params: any) {
   const id = parseInt(params.id, 10)
   const event = eventData[id]
 
