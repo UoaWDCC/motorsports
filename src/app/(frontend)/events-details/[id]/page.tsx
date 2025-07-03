@@ -2,14 +2,14 @@ import '../../styles.css'
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { eventData } from '../../data/events'
 
 interface EventDetailsParams {
   params: { id: string }
 }
-export default function EventDetailsPage(params: any) {
-  const id = parseInt(params.id, 10)
-  const event = eventData[id]
+export default async function EventDetailsPage({ params }: { params: { id: string } }) {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_PAYLOAD_URL}/api/events/${params.id}`, { cache: 'no-store' })
+  if (!res.ok) return <div>Event not found</div>
+  const event = await res.json()
 
   const dateStart = new Date(event.dateStart).toLocaleString('en-US', {
     weekday: 'short',

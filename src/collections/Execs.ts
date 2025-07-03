@@ -5,6 +5,9 @@ export const Execs: CollectionConfig = {
   admin: {
     useAsTitle: 'name',
   },
+  access: {
+    read: () => true, // allow public read access
+  },
   fields: [
     {
       name: 'name',

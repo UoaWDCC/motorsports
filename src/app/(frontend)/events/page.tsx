@@ -1,20 +1,45 @@
 'use client'
 
 import { eventData } from '../data/events'
-import { CalendarEvent } from '../types/events'
+import { CalendarEvent, TEvent } from '../types/events'
 import EventListView from '../components/Events/event-list-view'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import MyCalendar from '../components/Events/my-calendar'
 
 export default function EventsPage() {
   const [showCalendar, setShowCalendar] = useState(false)
+  const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[] | null>(null)
+  const [payloadEvents, setPayloadEvents] = useState<TEvent[]>([])
 
-  const calendarData = eventData.map((event) => ({
-    start: new Date(event.dateStart),
-    end: new Date(event.dateEnd),
-    title: event.title,
-    id: event.id,
-  }))
+  useEffect(() => {
+    async function fetchEvents() {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_PAYLOAD_URL}/api/events`)
+      const data = await res.json()
+      // Map Payload docs to CalendarEvent shape
+      const calendarData = data.docs.map((event: any) => ({
+        start: new Date(event.dateStart),
+        end: new Date(event.dateEnd),
+        title: event.title,
+        id: event.id,
+      }))
+
+      const eventData: TEvent[] = data.docs.map((event: any) => ({
+        id: event.id,
+        title: event.title,
+        info: event.info,
+        dateStart: event.dateStart,
+        dateEnd: event.dateEnd,
+        location: event.location,
+        imageUrl: event.imageUrl,
+      }))
+
+      setPayloadEvents(eventData)
+      setCalendarEvents(calendarData)
+    }
+    fetchEvents()
+  }, [])
+
+  if (!calendarEvents || !payloadEvents) return <div>Loading events...</div>
 
   return (
     <main>
@@ -22,10 +47,14 @@ export default function EventsPage() {
         <MyCalendar
           showCalendar={showCalendar}
           setShowCalendar={setShowCalendar}
-          events={calendarData}
+          events={calendarEvents}
         />
       ) : (
-        <EventListView showCalendar={showCalendar} setShowCalendar={setShowCalendar} />
+        <EventListView
+          showCalendar={showCalendar}
+          setShowCalendar={setShowCalendar}
+          events={payloadEvents}
+        />
       )}
     </main>
   )

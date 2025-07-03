@@ -2,16 +2,16 @@ import Header from './header'
 import Events from './events'
 
 import styles from './events.module.css'
-import { EventListViewProps } from '../../types/events'
+import { EventListViewProps, TEvent } from '../../types/events'
 
-const EventListView = ({ setShowCalendar, showCalendar }: EventListViewProps) => {  
+const EventListView = ({ setShowCalendar, showCalendar, events }: EventListViewProps & { events: TEvent[] }) => {  
   return (
     <section className={styles.EventMain}>
       <Header text="events" />
 
       <div className={styles.EventBody}>
-        <Events setShowCalendar={ setShowCalendar } showCalendar={ showCalendar} type="upcoming" />
-        <Events setShowCalendar={ setShowCalendar } showCalendar={ showCalendar} type="previous" />
+        <Events events={events} setShowCalendar={ setShowCalendar } showCalendar={ showCalendar} type="upcoming" />
+        <Events events={events} setShowCalendar={ setShowCalendar } showCalendar={ showCalendar} type="previous" />
       </div>
     </section>
   )

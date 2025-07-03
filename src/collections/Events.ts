@@ -5,6 +5,9 @@ export const Events: CollectionConfig = {
   admin: {
     useAsTitle: 'title',
   },
+  access: {
+    read: () => true, // allow public read access
+  },
   fields: [
     {
       name: 'title',

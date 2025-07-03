@@ -3,8 +3,13 @@ import Description from '../components/about-us/Description'
 import { fakeExecs, fakeDescription } from '../data/execs'
 import '../styles.css'
 import Image from 'next/image'
-export default function AboutUsPage() {
+export default async function AboutUsPage() {
 
+  const res = await fetch(`${process.env.NEXT_PUBLIC_PAYLOAD_URL}/api/execs`, { cache: 'no-store' })
+  const data = await res.json()
+  const execs = data.docs
+
+  if (!execs) return <div>Loading execs...</div>
 
   return (
     <div className="content-page">
@@ -20,9 +25,9 @@ export default function AboutUsPage() {
         <Description desc={fakeDescription}/>
       </div>
       <div>
-        <ExecsSection title="LEADERSHIP" execs={fakeExecs} titleColour="#0078BE" />
-        <ExecsSection title="SOCIAL" execs={fakeExecs} titleColour="#F2C01F" />
-        <ExecsSection title="COMPETITIVE" execs={fakeExecs} titleColour="#EB534A" />
+        <ExecsSection title="LEADERSHIP" execs={execs} titleColour="#0078BE" />
+        <ExecsSection title="SOCIAL" execs={execs} titleColour="#F2C01F" />
+        <ExecsSection title="COMPETITIVE" execs={execs} titleColour="#EB534A" />
       </div>
     </div>
   )
