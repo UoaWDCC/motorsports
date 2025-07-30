@@ -1,3 +1,4 @@
+'use client'
 import '../../styles.css'
 import React from 'react'
 import Link from 'next/link'
@@ -8,8 +9,8 @@ interface EventDetailsParams {
   params: { id: string }
 }
 export default function EventDetailsPage({ params }: EventDetailsParams) {
-  const id = parseInt(params.id, 10)
-  const event = eventData[id]
+  const { id } = React.use(params)
+  const event = eventData[parseInt(id, 10)]
 
   const dateStart = new Date(event.dateStart).toLocaleString('en-US', {
     weekday: 'short',
@@ -18,6 +19,18 @@ export default function EventDetailsPage({ params }: EventDetailsParams) {
     hour: '2-digit',
     minute: '2-digit',
   })
+  const handleDownload = () => {
+    const content = 'Hello World :D'
+    const blob = new Blob([content], { type: 'text/plain' })
+    const url = URL.createObjectURL(blob)
+
+    const link = document.createElement('a')
+    link.href = url
+    link.download = 'HelloWorld.txt'
+    link.click()
+
+    URL.revokeObjectURL(url) // Clean up
+  }
 
   return (
     <div className="content-page">
@@ -48,9 +61,20 @@ export default function EventDetailsPage({ params }: EventDetailsParams) {
                 <h2>{event.location}</h2>
                 <h3>
                   {event.title}
-                  <a className="event-details-event-link" href="https://www.google.com/">
-                    Export Event.
-                  </a>
+                  <div>
+                    <button onClick={handleDownload}>Export Event</button>
+                  </div>
+                  {/* <div>
+                    <button id="myInput" type="button" onClick={downloadTxtFile}>
+                      Export Event
+                    </button>
+                  </div> */}
+                  {/* <button className="event-details-event-link" onClick={downloadTxtFile}>
+                    Export Event
+                  </button> */}
+                  {/* <a className="event-details-event-link" href="https://www.google.com/">
+                    Export Event
+                  </a> */}
                   <p>Morbi molestie bibendum malesuada. Aenean vitae arcu consectetur.</p>
                 </h3>
                 <div className="event-details-line"></div>
