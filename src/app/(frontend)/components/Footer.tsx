@@ -25,17 +25,10 @@ export default function Footer() {
           ABOUT US
         </Link>
 
-        <Link href="/" className="foot-button">
-          LOGIN
-        </Link>
-
         <Link href="/volunteers" className="foot-button">
           VOLUNTEER
         </Link>
 
-        <Link href="/signup" className="foot-button">
-          SIGN UP
-        </Link>
         <div className="arrow-image-container">
           <ScrollToNavbarButton />
         </div>
