@@ -7,10 +7,15 @@ export default function Navbar() {
   const showExtraButtons = false // This hides the extra buttons we added initially.
   return (
     <div id="navbar" className="navbarContainer">
-        
       <div className="navbar">
         <Link href="/">
-        <Image src="/images/logo.png" alt="Vroom Logo" className="logo" width={80} height={75.47} />
+          <Image
+            src="/images/logo.png"
+            alt="Vroom Logo"
+            className="logo"
+            width={80}
+            height={75.47}
+          />
         </Link>
         <div className="nav-button-container">
           <Link href="/" className="nav-button nav-home">
@@ -40,7 +45,7 @@ export default function Navbar() {
               <Link href="/execs" className="nav-button">
                 Executives
               </Link>
-              
+
               {/* Signup   */}
               <Link href="/signup" className="nav-button">
                 Sign Up
@@ -57,11 +62,16 @@ export default function Navbar() {
           )}
         </div>
         <div className="nav-login-container">
-        <Link href="/" className="nav-login"> {/*Links to the home page as a placeholder for the future login button*/}
-          LOGIN
-        </Link>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSd8xNM5pR0KHjetb26VmL0A01kuA9fKvTslk6GtVNm9ldbmOw/viewform" //Links to the google form to sign up for vroom 
+            className="nav-login"
+            target="_blank"
+          >
+            Sign Up
+          </a>
         </div>
       </div>
     </div>
   )
 }
+
