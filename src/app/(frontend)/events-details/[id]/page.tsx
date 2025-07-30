@@ -4,10 +4,12 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { eventData } from '../../data/events'
+import { summary } from 'framer-motion/client'
 
 interface EventDetailsParams {
   params: { id: string }
 }
+
 export default function EventDetailsPage({ params }: EventDetailsParams) {
   const { id } = React.use(params)
   const event = eventData[parseInt(id, 10)]
@@ -19,14 +21,37 @@ export default function EventDetailsPage({ params }: EventDetailsParams) {
     hour: '2-digit',
     minute: '2-digit',
   })
+
+  const calendarEvent = {
+    header:
+      'BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//VROOM Event//EN\nCALSCALE:GREGORIAN\n\nBEGIN:VEVENT\nSUMMARY:',
+    summary: event.title,
+    start: event.dateStart,
+    end: event.dateEnd,
+    location: event.location,
+    footer: '\nEND:VEVENT\n\nEND:VCALENDAR\n',
+  }
+
+  const formatICSTime = (date: Date) => {
+    const pad = (num: number) => num.toString().padStart(2, '0')
+    const text = `${date.getFullYear()}${pad(date.getMonth() + 1)}${pad(date.getDate())}T${pad(date.getHours())}${pad(date.getMinutes())}${pad(date.getSeconds())}`
+    return text
+  }
+
+  const formatICSEvent = () => {
+    const file = `${calendarEvent.header}${calendarEvent.summary}\nDTSTART;TZID=Pacific/Auckland:${formatICSTime(new Date(calendarEvent.start))}\nDTEND;TZID=Pacific/Auckland:${formatICSTime(new Date(calendarEvent.end))}\nLOCATION:${calendarEvent.location}${calendarEvent.footer}`
+    return file
+  }
+
   const handleDownload = () => {
-    const content = 'Hello World :D'
+    const content = formatICSEvent()
+
     const blob = new Blob([content], { type: 'text/plain' })
     const url = URL.createObjectURL(blob)
 
     const link = document.createElement('a')
     link.href = url
-    link.download = 'HelloWorld.txt'
+    link.download = `${event.title}.ics`
     link.click()
 
     URL.revokeObjectURL(url) // Clean up
@@ -64,17 +89,6 @@ export default function EventDetailsPage({ params }: EventDetailsParams) {
                   <div>
                     <button onClick={handleDownload}>Export Event</button>
                   </div>
-                  {/* <div>
-                    <button id="myInput" type="button" onClick={downloadTxtFile}>
-                      Export Event
-                    </button>
-                  </div> */}
-                  {/* <button className="event-details-event-link" onClick={downloadTxtFile}>
-                    Export Event
-                  </button> */}
-                  {/* <a className="event-details-event-link" href="https://www.google.com/">
-                    Export Event
-                  </a> */}
                   <p>Morbi molestie bibendum malesuada. Aenean vitae arcu consectetur.</p>
                 </h3>
                 <div className="event-details-line"></div>
