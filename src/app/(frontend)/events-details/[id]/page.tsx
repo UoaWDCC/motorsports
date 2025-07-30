@@ -48,6 +48,9 @@ export default function EventDetailsPage({ params }: EventDetailsParams) {
                 <h2>{event.location}</h2>
                 <h3>
                   {event.title}
+                  <a className="event-details-event-link" href="https://www.google.com/">
+                    Export Event.
+                  </a>
                   <p>Morbi molestie bibendum malesuada. Aenean vitae arcu consectetur.</p>
                 </h3>
                 <div className="event-details-line"></div>
