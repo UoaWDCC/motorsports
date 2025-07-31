@@ -10,19 +10,22 @@ const openSans = Open_Sans({
   subsets: ['latin'],
   weight: ['400', '600', '700'],
   variable: '--font-open-sans',
-  display: 'swap'
+  display: 'swap',
 })
 
 export const metadata = {
   description: 'A blank template using Payload in a Next.js app.',
-  title: 'Payload Blank Template',
+  title: 'VROOM',
+  icons: {
+    icon: '/images/logo.png',
+  },
 }
 
 export default async function RootLayout(props: { children: React.ReactNode }) {
   const { children } = props
 
   return (
-    <html lang="en" className={ openSans.className }>
+    <html lang="en" className={openSans.className}>
       <body>
         <Navbar />
         <main>{children}</main>
