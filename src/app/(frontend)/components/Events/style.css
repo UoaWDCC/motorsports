@@ -6,7 +6,22 @@
     padding: 1.5rem;
     margin: 2rem auto;
     max-width: 900px;
+    box-shadow: none;
 }
+
+.calendar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 2rem;
+    z-index: 1000;
+  }
 
 .custom-toolbar-container {
     position: relative;
