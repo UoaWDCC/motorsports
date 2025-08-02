@@ -3,11 +3,10 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-interface EventDetailsParams {
-  params: { id: string }
-}
-export default async function EventDetailsPage({ params }: { params: { id: string } }) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_PAYLOAD_URL}/api/events/${params.id}`, { cache: 'no-store' })
+
+export default async function EventDetailsPage({ params }: { params: Promise<{ id: string }> }) {
+  const awaitedParams = await params
+  const res = await fetch(`${process.env.NEXT_PUBLIC_PAYLOAD_URL}/api/events/${awaitedParams.id}`, { cache: 'no-store' })
   if (!res.ok) return <div>Event not found</div>
   const event = await res.json()
 
