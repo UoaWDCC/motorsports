@@ -176,6 +176,7 @@ export interface Exec {
   id: string;
   name: string;
   role: string;
+  team: 'leadership' | 'social' | 'competitive' | 'general';
   photo?: (string | null) | Media;
   updatedAt: string;
   createdAt: string;
@@ -299,6 +300,7 @@ export interface EventsSelect<T extends boolean = true> {
 export interface ExecsSelect<T extends boolean = true> {
   name?: T;
   role?: T;
+  team?: T;
   photo?: T;
   updatedAt?: T;
   createdAt?: T;

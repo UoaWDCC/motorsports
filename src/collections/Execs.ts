@@ -20,6 +20,18 @@ export const Execs: CollectionConfig = {
       required: true,
     },
     {
+      name: 'team', 
+      type: 'select',
+      required: true,
+      options: [
+        { label: 'Leadership', value: 'leadership' },
+        { label: 'Social', value: 'social' },
+        { label: 'Competitive', value: 'competitive' },
+        { label: 'General', value: 'general' },
+      ],
+      defaultValue: 'general',
+    },
+    {
       name: 'photo',
       type: 'upload',
       relationTo: 'media', // assumes you have a 'media' collection
