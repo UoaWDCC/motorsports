@@ -78,8 +78,8 @@ html,body {
     margin: auto; /*Centers the content*/
 }
 .event-details-tile-content h2{
-    font-size: 16px;
-    font-weight: normal;
+    font-size: 2rem;
+    font-weight: bold;
     display: inline-block;
     margin: 3rem 3.5rem 0 0 ;
 }

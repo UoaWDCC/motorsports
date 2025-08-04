@@ -16,7 +16,8 @@ export default function EventsPage() {
       const res = await fetch(`${process.env.NEXT_PUBLIC_PAYLOAD_URL}/api/events`)
       const data = await res.json()
       // Map Payload docs to CalendarEvent shape
-      const calendarData = data.docs.map((event: any) => ({
+      const docs = Array.isArray(data.docs) ? data.docs : []
+      const calendarData = docs.map((event: any) => ({
         start: new Date(event.dateStart),
         end: new Date(event.dateEnd),
         title: event.title,
