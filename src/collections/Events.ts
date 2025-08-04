@@ -45,9 +45,14 @@ export const Events: CollectionConfig = {
       required: true,
     },
     {
+      name: 'formUrl',
+      type: 'text',
+      required: false,
+    },
+    {
       name: 'imageUrl',
-      type: 'text', // Or use 'upload' if you want to use Payload's media library
-      required: true,
+      type: 'upload', // Or use 'upload' if you want to use Payload's media library
+      relationTo: 'media',
     },
   ],
 }

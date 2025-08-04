@@ -164,7 +164,8 @@ export interface Event {
   dateStart: string;
   dateEnd: string;
   location: string;
-  imageUrl: string;
+  formUrl?: string | null;
+  imageUrl?: (string | null) | Media;
   updatedAt: string;
   createdAt: string;
 }
@@ -289,6 +290,7 @@ export interface EventsSelect<T extends boolean = true> {
   dateStart?: T;
   dateEnd?: T;
   location?: T;
+  formUrl?: T;
   imageUrl?: T;
   updatedAt?: T;
   createdAt?: T;
