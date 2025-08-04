@@ -4,20 +4,21 @@ body {
   padding: 0;
   height: 100%;
 }
+
 .navbar {
   display: flex;
-  padding-left: 100px;
   gap: 10px;
   background-color: #111111;
   height: 66px;
-  justify-content: center;
-
+  justify-content: space-between;
+  padding-left: 80px;
+  padding-right: 80px;
 }
+
 .navbar button {
   display: block;
   margin: auto;
 }
-
 
 .nav-button {
   justify-items: center;
@@ -29,6 +30,7 @@ body {
   cursor: pointer;
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
+  padding: 0px 50px;
 }
 
 .nav-home {
@@ -40,7 +42,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .nav-login {
@@ -49,22 +51,74 @@ body {
   cursor: pointer;
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  padding-right: 90px;
 }
 
 .nav-login-container {
   display: flex;
+  width: 80px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  padding-left: 70px;
 }
 
 .logo {
   display: block;
   transform: rotate(4.8deg);
-  padding-right: 20px;
+  margin-top: -8px;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .nav-button-container {
+    display: none;
+  }
+
+  .nav-login-container {
+    display: none;
+  }
+
+  .menu-icon {
+    height: 22px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .hamburger-item {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    list-style: none;
+  }
+
+  .hamburger-menu.active {
+    background: #111111;
+    left: 0;
+    opacity: 1;
+    transition: all 0.6s ease;
+    z-index: 1;
+  }
 }
 
 .footer-container {
