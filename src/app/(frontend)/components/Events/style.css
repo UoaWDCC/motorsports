@@ -1,4 +1,3 @@
-
 .calendar-container {
     background: #fff;
     border-radius: 18px;
@@ -19,6 +18,7 @@
 }
 
 .custom-toolbar {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center; 
@@ -27,7 +27,7 @@
     font-weight: bold;
     letter-spacing: 2px;
     color: #222;
-    position: relative;
+    padding: 0 4rem;
 }
 
 .nav-arrow {
@@ -36,8 +36,18 @@
     font-size: 1.5rem;
     color: #888;
     cursor: pointer;
-    margin: 0 1rem; 
     transition: color 0.2s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-arrow:first-child {
+    left: 1rem;
+}
+
+.nav-arrow:last-child {
+    right: 1rem;
 }
 
 .nav-arrow:hover {
@@ -53,6 +63,7 @@
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 3px;
+    flex: 1;
 }
 
 .rbc-calendar {
@@ -92,4 +103,25 @@
     border-radius: 4px;
     padding: 2px 4px;
     font-size: 0.9rem;
-  }
+}
+
+.calendar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.calendar-modal {
+  width: 90%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+}

@@ -10,8 +10,7 @@ const localizer = momentLocalizer(moment)
 export default function MyCalendar({ events, showCalendar, setShowCalendar }: MyCalendarProps) {
   const [currentDate, setCurrentDate] = useState(new Date())
 
-  /*To get rid of the "Today," "Back", "Next" and other view options 
-  that come default with the component.*/
+  //
   const CustomToolbar = (toolbar: any) => {
     const month = moment(toolbar.date).format('MMMM').toUpperCase()
     return (
@@ -25,14 +24,6 @@ export default function MyCalendar({ events, showCalendar, setShowCalendar }: My
             &gt;
           </button>
         </div>
-
-        {showCalendar && (
-          <img
-            src="/images/calendar-icon.png"
-            alt="Toggle Calendar View"
-            onClick={() => setShowCalendar(!showCalendar)}
-          />
-        )}
       </div>
     )
   }
@@ -44,13 +35,13 @@ export default function MyCalendar({ events, showCalendar, setShowCalendar }: My
         onNavigate={(newDate: Date) => setCurrentDate(newDate)}
         localizer={localizer}
         events={events}
-        startAccessor="start"
-        endAccessor="end"
+        startAccessor={(event) => new Date(event.start)}
+        endAccessor={(event) => new Date(event.end)}
         defaultView="month"
         views={['month']}
         style={{ height: 500 }}
         components={{ toolbar: CustomToolbar }}
-        onSelectEvent={(event: { id: string }) => {
+        onSelectEvent={(event) => {
           window.location.href = `/events-details/${event.id}`
         }}
       />
