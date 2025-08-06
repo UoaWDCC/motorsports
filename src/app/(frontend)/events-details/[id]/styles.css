@@ -1,0 +1,147 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: var(--font-open-sans), sans-serif;
+    color: #fff
+}
+
+.content-page {
+    display:flex;
+    flex-direction: column; /* Aligns items in a column */
+    min-height: 100vh;
+    width: 100%; 
+    overflow: hidden; 
+    background-color: #272727;  /*background dark gray*/
+}
+
+.content-page h1 {
+    text-align: center;
+    font-size: 8rem;
+}
+
+.background-image {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh; /* Full height of the viewport */
+    object-fit: cover;
+    filter: grayscale(100%);
+    
+}
+
+.background-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Gradient overlays the whole image */
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5) 40%, /* Semi-transparent black over the image */
+        #272727 100% /* Solid grey at the bottom */
+    );
+}
+.content-page h1,
+.navbar {
+    position: relative; /* Ensures they stay above the background layers */
+    z-index: 1; /* Places them above the gradient and image */
+}
+
+.event-details-content {
+    display: grid; /* Ensures the content is positioned correctly */
+    width: 65.5%;
+    /* width:1000px; */
+    margin: 0 auto; /*Centers the content*/
+    color:#000;
+}
+.event-details-back{
+    display:flex;
+    text-decoration:none;
+    font-size:32px;
+    color:#fff;
+    margin: 1rem 0 1rem 0;
+    font-weight: bold;
+
+}
+.event-details-tile {
+
+    width: 100%;
+    background-color:#fff;
+    border-radius: 20px;
+
+}
+.event-details-tile-content {
+    width:85.4%;
+    margin: auto; /*Centers the content*/
+}
+.event-details-tile-content h2{
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+    margin: 3rem 3.5rem 0 0 ;
+}
+
+.event-details-tile-content h3{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 1.5rem 0 1rem auto;
+}
+
+.event-details-tile-content h3 p{
+    font-size: 16px;
+    font-weight: normal;
+    width: 100%;
+    margin: 1rem auto;
+}
+
+.event-details-tile-content h4{
+    font-size: 32px;
+    font-weight: bold;
+    width: 100%;
+    margin: 3rem 0 1.5rem auto;
+}
+
+
+.event-details-tile-content h4 p{
+    font-size: 16px;
+    font-weight: normal;
+    width: 90%;
+    margin: 1.5rem 0 auto;
+}
+
+
+.event-details-line{
+    height:4px;
+    width:94%;
+    background-color:#E2E2E2;
+    margin: 3rem auto;
+}
+
+.event-details-form-link{
+    display: flex;
+    margin: 4rem 0 1rem auto;
+    font-style: italic;
+}
+.event-details-event-link{
+    display: flex;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+
+.event-details-form{
+    width: 100%;
+    height: 510px; 
+    border: none;
+    margin: auto;
+}
+
+.event-details-calendar-icon {
+    max-height: 64px;
+    max-width: 64px;
+    display: inline;
+    position: relative;
+}
