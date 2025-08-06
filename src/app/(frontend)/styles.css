@@ -139,3 +139,10 @@ html,body {
     border: none;
     margin: auto;
 }
+
+.event-details-calendar-icon {
+    max-height: 64px;
+    max-width: 64px;
+    display: inline;
+    position: relative; /* This makes the image positioned relative to its parent */
+}

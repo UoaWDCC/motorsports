@@ -4,7 +4,6 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { eventData } from '../../data/events'
-import { summary } from 'framer-motion/client'
 
 interface EventDetailsParams {
   params: { id: string }
@@ -106,18 +105,39 @@ export default function EventDetailsPage({ params }: EventDetailsParams) {
                 <h2>{event.location}</h2>
                 <h3>
                   {event.title}
-
-                  <p>
-                    <button onClick={handleDownload}>Export Event</button>
-                    <Link href={gcAdd()}>Add to Google Calander</Link>
-                    <div></div>Morbi molestie bibendum malesuada. Aenean vitae arcu consectetur.
-                  </p>
+                  <span className="event-details-calendar-icon">
+                    <a
+                      href="#"
+                      onClick={(e) => {
+                        e.preventDefault()
+                        handleDownload()
+                      }}
+                    >
+                      <Image
+                        src="/images/download.png"
+                        alt="Add to Google Calendar"
+                        width={64}
+                        height={64}
+                      />
+                    </a>
+                    <a href={gcAdd()}>
+                      <Image
+                        src="/images/Google_Calendar_Icon.png"
+                        alt="Add to Google Calendar"
+                        width={64}
+                        height={64}
+                      />
+                    </a>
+                  </span>
+                  <p>Morbi molestie bibendum malesuada. Aenean vitae arcu consectetur.</p>
                 </h3>
+
                 <div className="event-details-line"></div>
                 <h4>
                   {event.title}
                   <p>{event.info}</p>
                 </h4>
+
                 <a
                   className="event-details-form-link"
                   href="https://docs.google.com/forms/d/e/1FAIpQLSeNOzbSG3_NEg7f2MI6gHIZT--DYf1WDyWIqf--vKpQTaUi5w/viewform?usp=dialog"
