@@ -32,6 +32,7 @@ export default function EventDetailsPage({ params }: EventDetailsParams) {
     footer: '\nEND:VEVENT\n\nEND:VCALENDAR\n',
   }
 
+  //Format: YYYYMMDDTHHMMSS
   const formatICSTime = (date: Date) => {
     const pad = (num: number) => num.toString().padStart(2, '0')
     const text = `${date.getFullYear()}${pad(date.getMonth() + 1)}${pad(date.getDate())}T${pad(date.getHours())}${pad(date.getMinutes())}${pad(date.getSeconds())}`
@@ -41,6 +42,25 @@ export default function EventDetailsPage({ params }: EventDetailsParams) {
   const formatICSEvent = () => {
     const file = `${calendarEvent.header}${calendarEvent.summary}\nDTSTART;TZID=Pacific/Auckland:${formatICSTime(new Date(calendarEvent.start))}\nDTEND;TZID=Pacific/Auckland:${formatICSTime(new Date(calendarEvent.end))}\nLOCATION:${calendarEvent.location}${calendarEvent.footer}`
     return file
+  }
+
+  const gcParams = {
+    // https://calendar.google.com/calendar/render?action=TEMPLATE
+    // &text=[EventTitle]
+    // &dates=[StartDateTime]/[EndDateTime]
+    // &details=[EventDescription]
+    // &location=[EventLocation]
+    // &ctz=[TimeZone]
+    text: event.title,
+    start: formatICSTime(new Date(event.dateStart)),
+    end: formatICSTime(new Date(event.dateEnd)),
+    details: event.info,
+    location: event.location,
+    ctz: 'Pacific/Auckland',
+  }
+
+  const gcAdd = () => {
+    return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${gcParams.text}&dates=${gcParams.start}/${gcParams.end}&details=${gcParams.details}&location=${gcParams.location}&ctz=${gcParams.ctz}`
   }
 
   const handleDownload = () => {
@@ -86,10 +106,12 @@ export default function EventDetailsPage({ params }: EventDetailsParams) {
                 <h2>{event.location}</h2>
                 <h3>
                   {event.title}
-                  <div>
+
+                  <p>
                     <button onClick={handleDownload}>Export Event</button>
-                  </div>
-                  <p>Morbi molestie bibendum malesuada. Aenean vitae arcu consectetur.</p>
+                    <Link href={gcAdd()}>Add to Google Calander</Link>
+                    <div></div>Morbi molestie bibendum malesuada. Aenean vitae arcu consectetur.
+                  </p>
                 </h3>
                 <div className="event-details-line"></div>
                 <h4>
