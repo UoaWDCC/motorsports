@@ -1,10 +1,16 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
+import HamburgerMenu from './HamburgerMenu'
 import Link from 'next/link'
 import Image from 'next/image'
 import './styles.css'
 
 export default function Navbar() {
   const showExtraButtons = false // This hides the extra buttons we added initially.
+  const [click, setClick] = useState(false)
+  const handleClick = () => setClick(!click)
+  const closeBurgerMenu = () => setClick(false)
+
   return (
     <div id="navbar" className="navbarContainer">
       <div className="navbar">
@@ -63,15 +69,18 @@ export default function Navbar() {
         </div>
         <div className="nav-login-container">
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSd8xNM5pR0KHjetb26VmL0A01kuA9fKvTslk6GtVNm9ldbmOw/viewform" //Links to the google form to sign up for vroom 
+            href="https://docs.google.com/forms/d/e/1FAIpQLSd8xNM5pR0KHjetb26VmL0A01kuA9fKvTslk6GtVNm9ldbmOw/viewform" //Links to the google form to sign up for vroom
             className="nav-login"
             target="_blank"
           >
-            Sign Up
+            SIGNUP
           </a>
         </div>
+        <div className="hamburger-menu-icon" onClick={handleClick}>
+          {click ? 'close' : 'open'}
+        </div>
+        <HamburgerMenu click={click} closeBurgerMenu={closeBurgerMenu} />
       </div>
     </div>
   )
 }
-
