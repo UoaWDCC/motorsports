@@ -38,6 +38,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   width: 100%;
   gap: 2rem;
 }
@@ -64,6 +65,7 @@
   align-items: center;
   padding: 2rem 0rem 2rem 0rem;
   margin-top: 30px;
+  width: 100%;
 }
 
 .sponsors-contact-text {
