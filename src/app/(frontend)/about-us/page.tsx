@@ -3,9 +3,12 @@ import Description from '../components/about-us/Description'
 import { fakeExecs, fakeDescription } from '../data/execs'
 import '../styles.css'
 import Image from 'next/image'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About Us',
+}
 export default function AboutUsPage() {
-
-
   return (
     <div className="content-page">
       {/*reusable across similar page styles*/}
@@ -17,7 +20,7 @@ export default function AboutUsPage() {
 
       {/*customised content for the page*/}
       <div>
-        <Description desc={fakeDescription}/>
+        <Description desc={fakeDescription} />
       </div>
       <div>
         <ExecsSection title="LEADERSHIP" execs={fakeExecs} titleColour="#0078BE" />

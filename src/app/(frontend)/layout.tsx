@@ -1,4 +1,5 @@
 import React from 'react'
+import type { Metadata } from 'next'
 
 import { Open_Sans } from 'next/font/google'
 
@@ -13,9 +14,12 @@ const openSans = Open_Sans({
   display: 'swap',
 })
 
-export const metadata = {
+export const metadata: Metadata = {
   description: 'A blank template using Payload in a Next.js app.',
-  title: 'VROOM',
+  title: {
+    template: '%s | VROOM',
+    default: 'VROOM',
+  },
   icons: {
     icon: '/images/logo.png',
   },
