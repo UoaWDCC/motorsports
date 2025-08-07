@@ -76,10 +76,10 @@ export default function Navbar() {
             SIGNUP
           </a>
         </div>
-        <div className="menu-icon" onClick={handleClick}>
+        <div className="hamburger-menu-icon" onClick={handleClick}>
           {click ? 'close' : 'open'}
         </div>
-        <HamburgerMenu click={click} />
+        <HamburgerMenu click={click} closeBurgerMenu={closeBurgerMenu} />
       </div>
     </div>
   )
