@@ -51,9 +51,11 @@ export default function GalleryPage() {
       <div className="background-image">
         <Image src="/images/20250412_094454.jpg" className="background-image" alt="gallery" fill />
         <div className="background-gradient" />
-        <h1>GALLLERY</h1>
+        <div className="gallery-header" >
+          <h1>GALLLERY</h1>
+        </div>
       </div>
-      <div className="content">
+      <div className="gallery-content">
         <GalleryHeader />
         {testAlbums.map((album, index) => (
           <PhotoGalleryGrid name={album.name} images={album.images} key={index} />
