@@ -97,5 +97,26 @@
 
 .instagram{
     height: 40px;
+    width: 40px;
+}
+
+.tiktok{
+    height: 32px;
+    width: 28.14px;
+}
+
+.facebook{
+    height: 32px;
+    width: 32px;
+}
+
+.twitch{
+    height: 32px;
+    width: 32px;
+}
+
+.discord{
+    height: 32px;
+    width: 41.31px;
 }
 
