@@ -5,7 +5,7 @@ import '../styles.css'
 import Image from 'next/image'
 export default async function AboutUsPage() {
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_PAYLOAD_URL}/api/execs`, { cache: 'no-store' })
+  const res = await fetch(`${process.env.NEXT_PUBLIC_PAYLOAD_URL}/api/execs?limit=24`, { cache: 'no-store' })
   const data = await res.json()
   const execs = data.docs
 
