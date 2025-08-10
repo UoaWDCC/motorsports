@@ -3,6 +3,12 @@ import GalleryHeader from '../components/Gallery/GalleryHeader'
 import { GalleryAlbum } from '../types/gallery'
 import Image from 'next/image'
 
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Gallery',
+}
+
 const testAlbums: GalleryAlbum[] = [
   {
     name: '2025 VROOM HAVE A GO DAY',

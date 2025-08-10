@@ -3,6 +3,11 @@ import Description from '../components/about-us/Description'
 import {fakeDescription } from '../data/execs'
 import '../styles.css'
 import Image from 'next/image'
+import type { Metadata } from 'next'
+export const metadata: Metadata = {
+  title: 'About Us',
+}
+
 export default async function AboutUsPage() {
 
   const res = await fetch(`${process.env.NEXT_PUBLIC_PAYLOAD_URL}/api/execs`, { cache: 'no-store' })
@@ -28,7 +33,7 @@ export default async function AboutUsPage() {
 
       {/*customised content for the page*/}
       <div>
-        <Description desc={fakeDescription}/>
+        <Description desc={fakeDescription} />
       </div>
       <div>
         <ExecsSection title="LEADERSHIP" execs={leadershipExecs} titleColour="#0078BE" />

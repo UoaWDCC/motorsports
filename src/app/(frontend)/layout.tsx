@@ -1,4 +1,5 @@
 import React from 'react'
+import type { Metadata } from 'next'
 
 import { Open_Sans } from 'next/font/google'
 
@@ -10,19 +11,25 @@ const openSans = Open_Sans({
   subsets: ['latin'],
   weight: ['400', '600', '700'],
   variable: '--font-open-sans',
-  display: 'swap'
+  display: 'swap',
 })
 
-export const metadata = {
+export const metadata: Metadata = {
   description: 'A blank template using Payload in a Next.js app.',
-  title: 'Payload Blank Template',
+  title: {
+    template: '%s · VROOM',
+    default: 'VROOM',
+  },
+  icons: {
+    icon: '/images/logo.png',
+  },
 }
 
 export default async function RootLayout(props: { children: React.ReactNode }) {
   const { children } = props
 
   return (
-    <html lang="en" className={ openSans.className }>
+    <html lang="en" className={openSans.className}>
       <body>
         <Navbar />
         <main>{children}</main>
