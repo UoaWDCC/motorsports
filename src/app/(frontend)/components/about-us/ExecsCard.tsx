@@ -6,8 +6,8 @@ export default function ExecsCard({ exec, index }: { exec: Exec; index: number }
   return (
     <div key={index} className={styles.execsCard}>
       <Image
-        src={exec.image}
-        alt={`${exec.name}'s photo`}
+        src={exec.photo?.url}
+        alt={exec.photo?.alt || `${exec.name}'s photo`}
         className={styles.execsImage}
         width={140}
         height={200}
