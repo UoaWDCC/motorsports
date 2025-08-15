@@ -13,7 +13,7 @@ export default function EventsPage() {
 
   useEffect(() => {
     async function fetchEvents() {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_PAYLOAD_URL}/api/events`)
+      const res = await fetch(`/api/events`)
       const data = await res.json()
       // Map Payload docs to CalendarEvent shape
       const docs = Array.isArray(data.docs) ? data.docs : []
