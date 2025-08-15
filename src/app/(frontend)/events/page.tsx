@@ -44,18 +44,30 @@ export default function EventsPage() {
 
   return (
     <main>
-      {showCalendar ? (
-        <MyCalendar
-          showCalendar={showCalendar}
-          setShowCalendar={setShowCalendar}
-          events={calendarEvents}
-        />
-      ) : (
-        <EventListView
-          showCalendar={showCalendar}
-          setShowCalendar={setShowCalendar}
-          events={payloadEvents}
-        />
+      <EventListView showCalendar={showCalendar} setShowCalendar={setShowCalendar} events={payloadEvents} />
+      
+      {showCalendar && (
+        <div className="calendar-overlay" onClick={() => setShowCalendar(false)}>
+          <div className="calendar-modal" onClick={(e) => e.stopPropagation()}>
+            <MyCalendar
+              showCalendar={showCalendar}
+              setShowCalendar={setShowCalendar}
+              events={calendarEvents}
+            />
+          </div>
+        </div>
+      // {showCalendar ? (
+      //   <MyCalendar
+      //     showCalendar={showCalendar}
+      //     setShowCalendar={setShowCalendar}
+      //     events={calendarEvents}
+      //   />
+      // ) : (
+      //   <EventListView
+      //     showCalendar={showCalendar}
+      //     setShowCalendar={setShowCalendar}
+      //     events={payloadEvents}
+      //   />
       )}
     </main>
   )
