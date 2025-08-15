@@ -9,6 +9,9 @@ swap_size = 512
 
 [build]
 
+[env]
+  NEXT_PUBLIC_PAYLOAD_URL = "https://motorsports.fly.dev"
+
 [http_service]
     internal_port = 3000
     force_https = true
