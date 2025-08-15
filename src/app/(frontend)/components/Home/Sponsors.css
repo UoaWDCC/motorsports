@@ -1,32 +1,117 @@
 .sponsors-section {
-    background-color:#272727;
-    width: 100%;
+  background-color: #272727;
+  width: 100%;
 }
 
-.sponsors-container{   
-    width: 70%;
-    margin: 0 auto;
-    max-width: 1440px;
-    aspect-ratio: 4 / 3;
+.sponsors-container {
+  width: 70%;
+  margin: 0 auto;
+  max-width: 1440px;
+  aspect-ratio: 4 / 3;
 }
 .sponsors-header {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 25%;
-    position: relative;
-    font-size: clamp(8px, 2.5vw, 24px);
+  display: flex;
+  /* justify-content: center; */
+  align-items: flex-end;
+  height: 20%;
+  /* position: relative; */
+  /* font-size: clamp(8px, 2.5vw, 24px); */
 }
 
-.sponsors-body{
-    height: 75%;
+.sponsors-body {
+  /* height: 75%; */
+  height: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.sponsors-title{
-    margin: 0;
-    padding-bottom: 20px;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-    margin: 0;
+.sponsors-title {
+  margin: 0;
+  padding-bottom: 5%;
+  font-size: clamp(12px, 2.5vw, 24px);
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.sponsors-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+.sponsor-item {
+  display: flex;
+  /* flex: 0 0 auto; */
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 150px;
+}
+
+.sponsor-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sponsors-contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0rem 2rem 0rem;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.sponsors-contact-text {
+  font-size: clamp(12px, 1.1vw, 18px);
+}
+
+.sponsors-contact-link a {
+  display: inline-block;
+  background-color: #f2c01f;
+  color: #222;
+  font-weight: 600;
+  padding: 0.75em 2em;
+  border-radius: 0.5em;
+  text-decoration: none;
+  font-size: clamp(12px, 1.1vw, 18px);
+  transition:
+    background 0.2s,
+    color 0.2s,
+    box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+.sponsors-contact-link a:hover,
+.sponsors-contact-link a:focus {
+  background-color: #ffe066;
+  color: #111;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 768px) {
+  .sponsors-container {
+    width: 70%;
+    aspect-ratio: auto;
+    margin: 0 auto;
+  }
+  .sponsors-block {
+    flex-direction: column;
+  }
+  .sponsor-logo {
+    flex: 1 1 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .sponsors-section {
+    padding-bottom: 2rem;
+  }
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Calendar, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
-import { MyCalendarProps } from '../../types/events'
+import { CalendarEvent, MyCalendarProps } from '../../types/events'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import './style.css'
 
@@ -30,7 +30,7 @@ export default function MyCalendar({ events, showCalendar, setShowCalendar }: My
 
   return (
     <div className="calendar-container">
-      <Calendar
+      <Calendar<CalendarEvent>
         date={currentDate}
         onNavigate={(newDate: Date) => setCurrentDate(newDate)}
         localizer={localizer}

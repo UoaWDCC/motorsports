@@ -43,7 +43,6 @@ html,body {
         #272727 100% /* Solid grey at the bottom */
     );
 }
-
 .content-page h1,
 .navbar {
     position: relative; /* Ensures they stay above the background layers */
@@ -78,8 +77,8 @@ html,body {
     margin: auto; /*Centers the content*/
 }
 .event-details-tile-content h2{
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: normal;
     display: inline-block;
     margin: 3rem 3.5rem 0 0 ;
 }
@@ -125,10 +124,24 @@ html,body {
     margin: 4rem 0 1rem auto;
     font-style: italic;
 }
+.event-details-event-link{
+    display: flex;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+}
+
 
 .event-details-form{
     width: 100%;
     height: 510px; 
     border: none;
     margin: auto;
+}
+
+.event-details-calendar-icon {
+    max-height: 64px;
+    max-width: 64px;
+    display: inline;
+    position: relative;
 }

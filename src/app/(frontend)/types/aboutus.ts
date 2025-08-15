@@ -1,7 +1,12 @@
+export interface ExecPhoto {
+  url: string
+  alt?: string
+}
+
 export interface Exec {
   name: string
   role: string
-  image: string // URL for the exec's image
+  photo: ExecPhoto
 }
 
 export interface ExecsSectionProps {
