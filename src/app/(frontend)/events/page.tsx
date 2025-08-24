@@ -24,7 +24,7 @@ export default function EventsPage() {
         id: event.id,
       }))
 
-      const eventData: TEvent[] = data.docs.map((event: any) => ({
+      const eventData: TEvent[] = docs.map((event: any) => ({
         id: event.id,
         title: event.title,
         info: event.info,
