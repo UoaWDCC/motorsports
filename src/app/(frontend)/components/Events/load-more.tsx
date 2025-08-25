@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './events.module.css'
-import { ChevronDownIcon } from '../Icon'
+import { ChevronDownIcon } from '../Icon/UIIcons'
 
 const LoadMore = () => {
   return (
@@ -8,7 +8,6 @@ const LoadMore = () => {
       <p className={styles.LoadMoreText}>Load more</p>
       <ChevronDownIcon 
         className={styles.LoadMoreChevron} 
-        alt="Down facing chevron button"
       />
     </div>
   )

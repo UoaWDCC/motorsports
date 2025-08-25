@@ -1,4 +1,4 @@
-import { InstagramIcon, FacebookIcon, TiktokIcon, TwitchIcon, DiscordIcon } from "../Icon";
+import { InstagramIcon, FacebookIcon, TiktokIcon, TwitchIcon, DiscordIcon } from "../Icon/SocialIcons";
 import { SocialItem } from "../../types/home";
 
 export default function SocialComponent({ socialMedia }: { socialMedia: SocialItem[] }) {

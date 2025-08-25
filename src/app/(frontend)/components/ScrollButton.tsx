@@ -1,6 +1,6 @@
 'use client'
 import { animate } from 'framer-motion'
-import { UpArrowIcon } from './Icon'
+import { UpArrowIcon } from './Icon/NavigationIcons'
 
 export default function ScrollToNavbarButton() {
   const handleClick = () => {

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { GalleryAlbum } from '../../types/gallery'
 import './Gallery.css'
-import { ChevronUpIcon, ChevronDownIcon } from '../Icon'
+import { ChevronUpIcon, ChevronDownIcon } from '../Icon/UIIcons'
 
 export default function PhotoGalleryGrid(props: GalleryAlbum) {
   const [loadMore, setLoadMore] = useState(false)
@@ -29,12 +29,12 @@ export default function PhotoGalleryGrid(props: GalleryAlbum) {
           {loadMore ? (
             <ChevronUpIcon 
               className="LoadMoreChevron" 
-              alt="Up facing chevron button"
+
             />
           ) : (
             <ChevronDownIcon 
               className="LoadMoreChevron" 
-              alt="Down facing chevron button" 
+
             />
           )}
         </div>

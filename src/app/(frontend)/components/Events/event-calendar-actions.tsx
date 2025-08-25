@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { Icon } from '../Icon'
+import Icon from '../Icon/Icon'
 
 export default function EventCalendarActions({ event }: { event: any }) {
   // Format: YYYYMMDDTHHMMSS

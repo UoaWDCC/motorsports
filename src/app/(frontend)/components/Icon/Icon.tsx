@@ -7,7 +7,7 @@ export interface IconProps {
   alt: string
   width?: number
   height?: number
-  onClick?: () => void
+  onClick?: React.MouseEventHandler<HTMLImageElement>
   className?: string
   href?: string
   target?: string

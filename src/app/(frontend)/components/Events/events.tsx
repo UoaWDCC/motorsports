@@ -3,7 +3,7 @@ import styles from './events.module.css'
 import EventTile from './event-tile'
 import { IEventsProps, TEvent } from '../../types/events'
 import LoadMore from './load-more'
-import { CalendarIcon } from '../Icon'
+import { CalendarIcon } from '../Icon/EventIcons'
 
 const UpcomingEventLimit = 3
 const PreviousEventLimit = 2

@@ -1,6 +1,6 @@
 'use client'
 import { animate } from 'framer-motion'
-import { DownArrowIcon } from '../Icon'
+import { DownArrowIcon } from '../Icon/NavigationIcons'
 import './LandingScreen.css'
 
 export default function ScrollDownButton() {
