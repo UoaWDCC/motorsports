@@ -1,6 +1,6 @@
 'use client'
 import { animate } from 'framer-motion'
-import Image from 'next/image'
+import { DownArrowIcon } from '../Icon'
 import './LandingScreen.css'
 
 export default function ScrollDownButton() {
@@ -23,7 +23,7 @@ export default function ScrollDownButton() {
       <div className="landing-screen-more" onClick={handleClick} style={{ cursor: 'pointer' }}>
         <span className="landing-screen-more-words">FIND OUT MORE</span>
         <div>
-          <Image src="/images/down-arrow.png" alt="Arrow" width={32} height={18} />
+          <DownArrowIcon width={32} height={18} />
         </div>
       </div>
     </div>

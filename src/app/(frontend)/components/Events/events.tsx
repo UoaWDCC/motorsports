@@ -1,9 +1,9 @@
 import React, { ReactNode } from 'react'
 import styles from './events.module.css'
 import EventTile from './event-tile'
-import { eventData } from '../../data/events'
-import { CalendarEvent, IEventsProps, TEvent } from '../../types/events'
+import { IEventsProps, TEvent } from '../../types/events'
 import LoadMore from './load-more'
+import { CalendarIcon } from '../Icon'
 
 const UpcomingEventLimit = 3
 const PreviousEventLimit = 2
@@ -21,9 +21,9 @@ const Events = ({ type, showCalendar, setShowCalendar, events }: EventsProps): R
       <div className={styles.EventsHeader}>
         <p className={styles.EventsSubtitle}>{title}</p>
         { type === 'upcoming' &&
-          <img
-            src="/images/calendar.png"
-            alt="Toggle Calendar View"
+          <CalendarIcon
+            width={24}
+            height={24}
             onClick={() => setShowCalendar(!showCalendar)}
           />
         }

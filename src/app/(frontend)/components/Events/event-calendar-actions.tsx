@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { Icon } from '../Icon'
 
 export default function EventCalendarActions({ event }: { event: any }) {
   // Format: YYYYMMDDTHHMMSS
@@ -50,28 +51,24 @@ export default function EventCalendarActions({ event }: { event: any }) {
 
   return (
     <span className="event-details-calendar-icon">
-      <a
-        href="#"
+      <Icon
+        src="/images/download.png"
+        alt="Download ICS"
+        width={64}
+        height={64}
         onClick={(e) => {
           e.preventDefault()
           handleDownload()
         }}
-      >
-        <Image
-          src="/images/download.png"
-          alt="Download ICS"
-          width={64}
-          height={64}
-        />
-      </a>
-      <a href={gcAdd()}>
-        <Image
-          src="/images/Google_Calendar_Icon.png"
-          alt="Add to Google Calendar"
-          width={64}
-          height={64}
-        />
-      </a>
+        href="#"
+      />
+      <Icon
+        src="/images/Google_Calendar_Icon.png"
+        alt="Add to Google Calendar"
+        width={64}
+        height={64}
+        href={gcAdd()}
+      />
     </span>
   )
 }

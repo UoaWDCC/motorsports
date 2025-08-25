@@ -1,5 +1,5 @@
 export interface SocialItem {
-    imageUrl: string;
+    imageUrl?: string;
     linkUrl: string;
     classname: string;
 }
