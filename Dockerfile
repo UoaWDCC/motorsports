@@ -24,7 +24,7 @@ FROM base AS builder
 WORKDIR /app
 
 ARG NEXT_PUBLIC_PAYLOAD_URL
-ENV NEXT_PUBLIC_PAYLOAD_URL=$NEXT_PUBLIC_PAYLOAD_URL
+ENV NEXT_PUBLIC_PAYLOAD_URL="https://motorsports.fly.dev"
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 

@@ -1,6 +1,6 @@
 'use client'
 import { animate } from 'framer-motion'
-import Image from 'next/image'
+import { UpArrowIcon } from './Icon/NavigationIcons'
 
 export default function ScrollToNavbarButton() {
   const handleClick = () => {
@@ -19,12 +19,9 @@ export default function ScrollToNavbarButton() {
   }
 
   return (
-    <Image
-      src="/images/up-arrow.png"
-      alt="Scroll to navbar"
+    <UpArrowIcon 
       width={50}
       height={50}
-      style={{ cursor: 'pointer' }}
       onClick={handleClick}
     />
   )
