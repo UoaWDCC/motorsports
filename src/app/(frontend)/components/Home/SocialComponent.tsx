@@ -5,7 +5,6 @@ export default function SocialComponent({ socialMedia }: { socialMedia: SocialIt
     const renderSocialIcon = (item: SocialItem, index: number) => {
         const className = `${item.classname} small-image`;
         const props = { 
-            key: index,
             className: className,
             href: item.linkUrl,
             width: 24,
@@ -15,15 +14,15 @@ export default function SocialComponent({ socialMedia }: { socialMedia: SocialIt
         // Return the appropriate icon based on classname
         switch (item.classname) {
             case "instagram":
-                return <InstagramIcon {...props} />;
+                return <InstagramIcon key={index} {...props} />;
             case "facebook":
-                return <FacebookIcon {...props} />;
+                return <FacebookIcon key={index} {...props} />;
             case "tiktok":
-                return <TiktokIcon {...props} />;
+                return <TiktokIcon key={index} {...props} />;
             case "twitch":
-                return <TwitchIcon {...props} />;
+                return <TwitchIcon key={index} {...props} />;
             case "discord":
-                return <DiscordIcon {...props} />;
+                return <DiscordIcon key={index} {...props} />;
             default:
                 return null;
         }
