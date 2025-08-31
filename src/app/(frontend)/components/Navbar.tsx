@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import HamburgerMenu from './HamburgerMenu'
+import { HamburgerClose, HamburgerMenu as HamburgerMenuIcon } from './Icon/HamburgerMenuIcons'
 import Link from 'next/link'
 import Image from 'next/image'
 import './styles.css'
@@ -76,9 +77,17 @@ export default function Navbar() {
             SIGNUP
           </a>
         </div>
-        <div className="hamburger-menu-icon" onClick={handleClick}>
-          {click ? 'close' : 'open'}
-        </div>
+
+        {click ? (
+          <HamburgerClose className="hamburger-menu-icon" onClick={handleClick} />
+        ) : (
+          <HamburgerMenuIcon
+            width={28}
+            height={28}
+            className="hamburger-menu-icon"
+            onClick={handleClick}
+          />
+        )}
         <HamburgerMenu click={click} closeBurgerMenu={closeBurgerMenu} />
       </div>
     </div>
