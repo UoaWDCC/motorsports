@@ -100,11 +100,8 @@ body {
 
   .hamburger-menu-icon {
     display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 1.8rem;
     cursor: pointer;
+    margin-top: 20px;
   }
 
   .hamburger-item {

@@ -1,5 +1,6 @@
-export { default as Icon } from './Icon';
-export * from './EventIcons';
-export * from './NavigationIcons';
-export * from './UIIcons';
-export * from './SocialIcons';
+export { default as Icon } from './Icon'
+export * from './EventIcons'
+export * from './NavigationIcons'
+export * from './UIIcons'
+export * from './SocialIcons'
+export * from './HamburgerMenuIcons'
