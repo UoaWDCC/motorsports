@@ -27,6 +27,7 @@
     "react": "19.0.0",
     "react-big-calendar": "^1.19.4",
     "react-dom": "19.0.0",
+    "react-draggable": "^4.5.0",
     "react-scroll": "^1.9.3",
     "sharp": "0.32.6"
   },

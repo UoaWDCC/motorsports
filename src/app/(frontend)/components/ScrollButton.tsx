@@ -1,9 +1,10 @@
 'use client'
+
+import React from 'react'
 import { animate } from 'framer-motion'
 import { UpArrowIcon } from './Icon/NavigationIcons'
 
-export default function ScrollToNavbarButton() {
-  const handleClick = () => {
+export const handleClick = () => {
     const target = document.getElementById('navbar')
     if (target) {
       const targetTop = target.getBoundingClientRect().top + window.scrollY
@@ -18,12 +19,21 @@ export default function ScrollToNavbarButton() {
     }
   }
 
-  return (
-    <UpArrowIcon 
-      width={50}
-      height={50}
-      onClick={handleClick}
-    />
+
+
+  
+
+
+
+export default function ScrollToNavbarButton(){
+
+return (
+    <div>
+      <UpArrowIcon 
+        width={50}
+        height={50}
+        onClick={handleClick}
+      />
+    </div>
   )
 }
-
