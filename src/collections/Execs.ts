@@ -8,6 +8,7 @@ export const Execs: CollectionConfig = {
   access: {
     read: () => true, // allow public read access
   },
+  defaultSort: 'order',
   fields: [
     {
       name: 'name',
@@ -35,6 +36,22 @@ export const Execs: CollectionConfig = {
       name: 'photo',
       type: 'upload',
       relationTo: 'media', // assumes you have a 'media' collection
+    },
+    {
+      name: 'order',
+      type: 'select',
+      required: true,
+      admin: {
+        description: 'Sort priority (range 1–5, smaller numbers appear first)',
+      },
+      options: [
+        { label: '1', value: '1' },
+        { label: '2', value: '2' },
+        { label: '3', value: '3' },
+        { label: '4', value: '4' },
+        { label: '5', value: '5' },
+      ],
+      defaultValue: '5',
     },
   ],
 }
