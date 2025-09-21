@@ -1,4 +1,5 @@
 import './styles.css'
+import '../styles.css'
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -27,6 +28,9 @@ export default function LeaderboardPage() {
             </Link>
           </div>
 
+          <div className="leaderboard-tile">
+            <Leaderboard></Leaderboard>
+          </div>
           <div className="leaderboard-tile">
             <Leaderboard></Leaderboard>
           </div>

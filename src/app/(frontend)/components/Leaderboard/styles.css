@@ -1,5 +1,6 @@
 #board {
   width: 100%;
+  margin: auto auto 5rem auto;
   border-spacing: 0px 0px; /* vertical gap between rows */
   background-color: #fff;   /* color for the gaps */
 }
