@@ -13,11 +13,11 @@ export default function LeaderboardPage() {
         <Image
           src="/images/20250412_094454.jpg"
           className="background-image"
-          alt="Event Details"
+          alt="Leaderboards"
           fill
         />
         <div className="background-gradient" />
-        <h1>Leaderboard</h1>
+        <h1>Leaderboards</h1>
       </div>
       {/*customised content for the page*/}
       <div className="content">

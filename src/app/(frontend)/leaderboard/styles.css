@@ -19,21 +19,3 @@
     border-radius: 20px;
     margin: auto auto 10rem auto;
 }
-.leaderboard-tile-content {
-    width:85.4%;
-    margin: 2rem auto 10rem auto;
-    position: relative;
-}
-
-.leaderboard-tile-content h2{ 
-    font-size: 16px;
-    font-weight: normal;
-    display: inline-block;
-    margin: 1.5rem 0 0 0 ;
-}
-.top-right {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0 0 0 0;
-}

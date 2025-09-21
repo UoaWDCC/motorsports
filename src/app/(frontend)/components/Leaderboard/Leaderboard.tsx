@@ -15,7 +15,7 @@ export default function Leaderboard() {
       <div className="leaderboard-tile-content">
         <h2>Name of Event</h2>
         <h2 className="top-right">DD/MM/YYYY</h2>
-        <div>
+        <div className="leaderboard-podium">
           <div style={{ marginLeft: '25%', display: 'inline-block' }}>{secondCirc}</div>
           <div style={{ marginLeft: '5%', display: 'inline-block' }}>{firstCirc}</div>
           <div style={{ marginLeft: '5%', display: 'inline-block' }}>{thirdCirc}</div>
