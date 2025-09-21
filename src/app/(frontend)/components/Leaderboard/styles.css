@@ -1,0 +1,32 @@
+#board {
+  width: 100%;
+  border-spacing: 0px 0px; /* vertical gap between rows */
+  background-color: #fff;   /* color for the gaps */
+}
+.board tr.primary{
+    background-color: #fff;
+}
+
+.board tr.secondary{
+    background-color: #F6F6F6;
+}
+
+.board td.portrait {
+    padding: 12px 80px; /* top/bottom, left/right padding */
+    text-align: center;
+}
+
+.board td.name {
+    padding: 12px 50px; /* top/bottom, left/right padding */
+    text-align: center;
+}
+
+.board td.position {
+    padding: 12px 50px; /* top/bottom, left/right padding */
+    text-align: center;
+}
+
+.board td.score {
+    padding: 12px 150px; /* top/bottom, left/right padding */
+    text-align: center;
+}

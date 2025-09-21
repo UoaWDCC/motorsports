@@ -1,12 +1,15 @@
 import React from 'react'
 import './styles.css'
 import PodiumCircle from './PodiumCircles'
+import RaceData from './LeaderboardData'
+import CreateTable from './BoardBuilder'
 export default function Leaderboard() {
   const podiumWidth = 5
-  const tableWidth = 8 / 3
   const firstCirc = PodiumCircle(150, podiumWidth, 1)
   const secondCirc = PodiumCircle(120, podiumWidth, 2)
   const thirdCirc = PodiumCircle(120, podiumWidth, 3)
+  const raceData = RaceData()
+
   return (
     <div>
       <div className="leaderboard-tile-content">
@@ -19,43 +22,7 @@ export default function Leaderboard() {
         </div>
       </div>
 
-      <div className="board">
-        <div className="board-header"></div>
-        <div className="board-row">
-          <table id="board">
-            <tbody>
-              <tr>
-                <td className="portrait"></td>
-                <td className="name">Driver Name</td>
-                <td className="postion">Position</td>
-                <td className="score">Score</td>
-              </tr>
-              <tr style={{ backgroundColor: '#F6F6F6' }}>
-                <td className="portrait">{PodiumCircle(50, tableWidth, 1)}</td>
-                <td className="name">deez</td>
-                <td className="postion">1</td>
-                <td className="score">1:56</td>
-              </tr>
-              <tr style={{ backgroundColor: '#fff' }}>
-                <td className="portrait">{PodiumCircle(50, tableWidth, 2)}</td>
-                <td className="name">deez</td>
-                <td className="postion">2</td>
-                <td className="score">1:56</td>
-              </tr>
-              <tr style={{ backgroundColor: '#F6F6F6' }}>
-                <td className="portrait">{PodiumCircle(50, tableWidth, 3)}</td>
-                <td className="name">deez</td>
-                <td className="postion">3</td>
-                <td className="score">1:56</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+      {CreateTable({ data: raceData })}
     </div>
   )
 }
-
-// function(){
-
-// }
