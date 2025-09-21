@@ -1,18 +1,18 @@
-export default function PodiumCircle(size: number, position: number) {
-  let colour = '#000'
-  switch (position) {
+export default function PodiumCircle(size: number, border: number, rank: number) {
+  let colour = '#ccc'
+  switch (rank) {
     case 1:
       colour = '#EFBF04'
       break
     case 2:
       colour = '#c0c0c0'
       break
-    default:
+    case 3:
       colour = '#cd7f32'
       break
   }
 
-  const width = 5
+  const width = border
   const rad = size / 2
   return (
     <svg width={(rad + width) * 2} height={(rad + width) * 2}>

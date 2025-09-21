@@ -28,9 +28,7 @@ export default function LeaderboardPage() {
           </div>
 
           <div className="leaderboard-tile">
-            <div className="leaderboard-tile-content">
-              <Leaderboard></Leaderboard>
-            </div>
+            <Leaderboard></Leaderboard>
           </div>
         </div>
       </div>

@@ -36,3 +36,40 @@
     right: 0;
     margin: 0 0 0 0;
 }
+
+#board {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0px 0px; /* vertical gap between rows */
+  background-color: #fff;   /* color for the gaps */
+}
+
+.board tr{
+    border-bottom: 1px solid #ddd;
+}
+
+.board td {
+    border-color: #ddd;
+    border-block-start-color: #ddd;
+}
+
+.board td.portrait {
+    padding: 12px 80px; /* top/bottom, left/right padding */
+    text-align: center;
+}
+
+.board td.name {
+    padding: 12px 120px; /* top/bottom, left/right padding */
+    text-align: center;
+}
+
+.board td.position {
+    padding: 12px 275px; /* top/bottom, left/right padding */
+    text-align: center;
+}
+
+.board td.score {
+    padding: 12px 300px; /* top/bottom, left/right padding */
+    text-align: center;
+}
