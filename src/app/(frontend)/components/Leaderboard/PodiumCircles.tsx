@@ -2,13 +2,13 @@ export default function PodiumCircle(size: number, border: number, rank: number)
   let colour = '#ccc'
   switch (rank) {
     case 1:
-      colour = '#EFBF04'
+      colour = '#F2C01F'
       break
     case 2:
-      colour = '#c0c0c0'
+      colour = '#EB534A'
       break
     case 3:
-      colour = '#cd7f32'
+      colour = '#9747FF'
       break
   }
 
