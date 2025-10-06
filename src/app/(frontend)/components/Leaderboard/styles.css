@@ -1,0 +1,54 @@
+.leaderboard-tile-content {
+    width:85.4%;
+    margin: auto auto 5rem auto;
+    position: relative;
+}
+
+.leaderboard-tile-content h2{ 
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+    margin: 1.5rem 0 0 0 ;
+}
+.top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0 0 0 0;
+}
+.leaderboard-podium{
+    margin: 4rem auto;
+}
+#board {
+  width: 100%;
+  margin: auto auto 5rem auto;
+  border-spacing: 0px 0px; /* vertical gap between rows */
+  background-color: #fff;   /* color for the gaps */
+}
+.board tr.primary{
+    background-color: #fff;
+}
+
+.board tr.secondary{
+    background-color: #F6F6F6;
+}
+
+.board td.portrait {
+    padding: 12px 80px; /* top/bottom, left/right padding */
+    text-align: center;
+}
+
+.board td.name {
+    padding: 12px 50px; /* top/bottom, left/right padding */
+    text-align: center;
+}
+
+.board td.position {
+    padding: 12px 50px; /* top/bottom, left/right padding */
+    text-align: center;
+}
+
+.board td.score {
+    padding: 12px 150px; /* top/bottom, left/right padding */
+    text-align: center;
+}

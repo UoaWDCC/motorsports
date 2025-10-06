@@ -1,0 +1,21 @@
+.leaderboard-content {
+    display: grid; /* Ensures the content is positioned correctly */
+    width: 65.5%;
+    /* width:1000px; */
+    margin: auto; /*Centers the content*/
+    color:#000;
+}
+.button-back{
+    display:flex;
+    text-decoration:none;
+    font-size:32px;
+    color:#fff;
+    margin: 1rem 0 1rem 0;
+    font-weight: bold;
+}
+.leaderboard-tile {
+    width: 100%;
+    background-color:#fff;
+    border-radius: 20px;
+    margin: auto auto 10rem auto;
+}
