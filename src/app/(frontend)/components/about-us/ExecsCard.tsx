@@ -9,8 +9,8 @@ export default function ExecsCard({ exec, index }: { exec: Exec; index: number }
         src={exec.photo?.url}
         alt={exec.photo?.alt || `${exec.name}'s photo`}
         className={styles.execsImage}
-        width={140}
-        height={200}
+        width={192}
+        height={280}
       />
       <h3 className={styles.execName}>{exec.name}</h3>
       <p className={styles.execRole}>{exec.role}</p>
