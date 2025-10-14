@@ -178,6 +178,10 @@ export interface Exec {
   role: string;
   team: 'leadership' | 'social' | 'competitive' | 'general';
   photo?: (string | null) | Media;
+  /**
+   * Sort priority (range 1–5, smaller numbers appear first)
+   */
+  order: '1' | '2' | '3' | '4' | '5';
   updatedAt: string;
   createdAt: string;
 }
@@ -302,6 +306,7 @@ export interface ExecsSelect<T extends boolean = true> {
   role?: T;
   team?: T;
   photo?: T;
+  order?: T;
   updatedAt?: T;
   createdAt?: T;
 }
