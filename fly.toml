@@ -23,3 +23,7 @@ swap_size = 512
 [[vm]]
     size = 'shared-cpu-1x'
     memory = '256mb'
+
+[[mounts]]
+  source = "media_data"
+  destination = "/data"
