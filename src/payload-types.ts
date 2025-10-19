@@ -71,6 +71,7 @@ export interface Config {
     media: Media;
     events: Event;
     execs: Exec;
+    'gallery-page-settings': GalleryPageSetting;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -81,6 +82,7 @@ export interface Config {
     media: MediaSelect<false> | MediaSelect<true>;
     events: EventsSelect<false> | EventsSelect<true>;
     execs: ExecsSelect<false> | ExecsSelect<true>;
+    'gallery-page-settings': GalleryPageSettingsSelect<false> | GalleryPageSettingsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -186,6 +188,47 @@ export interface Exec {
   createdAt: string;
 }
 /**
+ * Manage copy for the gallery landing page.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "gallery-page-settings".
+ */
+export interface GalleryPageSetting {
+  id: string;
+  /**
+   * Hero title displayed on the gallery page.
+   */
+  pageTitle: string;
+  /**
+   * Optional rich text intro beneath the header.
+   */
+  pageDescription?: {
+    root: {
+      type: string;
+      children: {
+        type: string;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  /**
+   * CTA label for expanding gallery items.
+   */
+  loadMoreText?: string | null;
+  /**
+   * CTA label for collapsing gallery items.
+   */
+  loadLessText?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
@@ -207,6 +250,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'execs';
         value: string | Exec;
+      } | null)
+    | ({
+        relationTo: 'gallery-page-settings';
+        value: string | GalleryPageSetting;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -307,6 +354,18 @@ export interface ExecsSelect<T extends boolean = true> {
   team?: T;
   photo?: T;
   order?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "gallery-page-settings_select".
+ */
+export interface GalleryPageSettingsSelect<T extends boolean = true> {
+  pageTitle?: T;
+  pageDescription?: T;
+  loadMoreText?: T;
+  loadLessText?: T;
   updatedAt?: T;
   createdAt?: T;
 }
