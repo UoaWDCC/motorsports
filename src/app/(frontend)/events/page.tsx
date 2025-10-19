@@ -2,9 +2,9 @@
 
 import { eventData } from '../data/events'
 import { CalendarEvent, TEvent } from '../types/events'
-import EventListView from '../components/Events/event-list-view'
+import EventListView from '../components/events/event-list-view'
 import { useEffect, useState } from 'react'
-import MyCalendar from '../components/Events/my-calendar'
+import MyCalendar from '../components/events/my-calendar'
 
 export default function EventsPage() {
   const [showCalendar, setShowCalendar] = useState(false)
@@ -24,15 +24,28 @@ export default function EventsPage() {
         id: event.id,
       }))
 
-      const eventData: TEvent[] = docs.map((event: any) => ({
-        id: event.id,
-        title: event.title,
-        info: event.info,
-        dateStart: event.dateStart,
-        dateEnd: event.dateEnd,
-        location: event.location,
-        imageUrl: event.imageUrl,
-      }))
+      const eventData: TEvent[] = docs.map((event: any) => {
+        let imageUrl = ''
+        if (event.image) {
+          imageUrl = typeof event.image === 'string' 
+            ? event.image 
+            : event.image.url || ''
+        }
+        
+        if (!imageUrl) {
+          imageUrl = '/images/event1.jpg'
+        }
+
+        return {
+          id: event.id,
+          title: event.title,
+          info: event.info,
+          dateStart: event.dateStart,
+          dateEnd: event.dateEnd,
+          location: event.location,
+          imageUrl: imageUrl,
+        }
+      })
 
       setPayloadEvents(eventData)
       setCalendarEvents(calendarData)
