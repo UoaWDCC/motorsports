@@ -45,14 +45,14 @@ export default function Footer() {
       document.removeEventListener('mousemove', handleMouseMove)
       document.removeEventListener('mouseup', handleMouseUp)
     }
-  }) 
+  })
 
   const handleClick = () => {
     if (!hasMoved) {
       scrollToNavbar()
       setPosition({
         x: 0,
-        y: 0
+        y: 0,
       })
     }
     setHasMoved(false)
@@ -75,10 +75,6 @@ export default function Footer() {
 
         <Link href="/about-us" className="foot-button">
           ABOUT US
-        </Link>
-
-        <Link href="/volunteers" className="foot-button">
-          VOLUNTEER
         </Link>
 
         <Link href="/admin" className="admin-button foot-button">
