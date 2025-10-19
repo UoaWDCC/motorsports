@@ -2,7 +2,7 @@ import './Sponsors.css'
 import SponsorsBlock from './SponsorsBlock'
 import SponsorsContact from './SponsorsContact'
 
-export default function Sponsors() {
+export default async function Sponsors() {
   return (
     <section className="sponsors-section">
       <div className="sponsors-container">

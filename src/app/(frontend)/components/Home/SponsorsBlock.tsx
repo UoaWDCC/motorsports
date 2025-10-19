@@ -1,28 +1,37 @@
 import './Sponsors.css'
 import ImageDisplay from './ImageDisplay'
+import { getPayload } from 'payload';
+import  buildConfig  from '@/payload.config';
 
-const sponsors = [
-  {
-    id: 1,
-    sponsorName: 'Red Bull',
-    linkUrl: 'https://www.redbull.com/',
-    imageUrl: 'images/sponsors/redbull-300ppi.png',
-  },
-]
+export default async function SponsorsBlock() {
+  const payload = await getPayload({ config: buildConfig });
+  const sponsors = await payload.find({
+    collection: 'sponsors',
+    depth: 1,
+  })
 
-export default function SponsorsBlock() {
+  // fallback if no sponsors found
+  if (!sponsors.docs) {
+    return (
+      <div className="sponsors-block">
+        <p>No sponsors found</p>
+      </div>
+    )
+  }
+
   return (
     <div className="sponsors-block">
-      {sponsors.map((sponsor) => (
-        <div key={sponsor.id} className="sponsor-item">
-          <ImageDisplay
-            linkUrl={sponsor.linkUrl}
-            imageUrl={sponsor.imageUrl}
-            alt={sponsor.sponsorName}
-            classname="sponsor-logo"
-          />
-        </div>
-      ))}
+
+        
+          <div className="sponsor-item">
+            <ImageDisplay
+              linkUrl={ ''}
+              imageUrl={"images/sponsors/redbull-300ppi.png"}
+              
+              classname="sponsor-logo"
+            />
+          </div>
+        
     </div>
   )
 }

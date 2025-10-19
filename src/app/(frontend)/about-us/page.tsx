@@ -1,6 +1,6 @@
 import ExecsSection from '../components/about-us/ExecsSection'
 import Description from '../components/about-us/Description'
-import {fakeDescription } from '../data/execs'
+import { fakeDescription } from '../data/execs'
 import '../styles.css'
 import Image from 'next/image'
 import type { Metadata } from 'next'
@@ -9,14 +9,26 @@ export const metadata: Metadata = {
 }
 
 export default async function AboutUsPage() {
+  // build a safe base URL (fallback to localhost for local dev)
+  const base = process.env.NEXT_PUBLIC_PAYLOAD_URL ?? 'http://localhost:3000'
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_PAYLOAD_URL}/api/execs`, { cache: 'no-store' })
-  const data = await res.json()
-  const execs = data.docs
+  let execs: any[] = []
+  try {
+    const url = new URL('/api/execs', base).toString()
+    const res = await fetch(url, { cache: 'no-store' })
+    if (!res.ok) {
+      throw new Error(`Fetch failed: ${res.status} ${res.statusText}`)
+    }
+    const data = await res.json()
+    execs = data?.docs ?? []
+  } catch (err) {
+    console.error('Failed to fetch execs:', err)
+  }
 
-  if (!execs) return <div>Loading execs...</div>
 
-   // Filter execs by team
+  if (!execs || execs.length === 0) return <div>Loading execs...</div>
+
+  // Filter execs by team
   const leadershipExecs = execs.filter((exec: any) => exec.team === 'leadership')
   const socialExecs = execs.filter((exec: any) => exec.team === 'social')
   const competitiveExecs = execs.filter((exec: any) => exec.team === 'competitive')
