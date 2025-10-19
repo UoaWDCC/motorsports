@@ -49,10 +49,6 @@ export default function Navbar() {
 
           {showExtraButtons && (
             <>
-              <Link href="/volunteers" className="nav-button">
-                Volunteer
-              </Link>
-
               {/* ExecsPage   */}
               <Link href="/execs" className="nav-button">
                 Executives
