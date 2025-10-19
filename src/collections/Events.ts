@@ -20,6 +20,12 @@ export const Events: CollectionConfig = {
       required: true,
     },
     {
+      name: 'image',
+      type: 'upload',
+      relationTo: 'media',
+      required: false,
+    },
+    {
       name: 'dateStart',
       type: 'date',
       required: true,

@@ -16,13 +16,26 @@ export default function Events(){
                 const events = await response.json()
                 const docs = Array.isArray(events.docs) ? events.docs : []
 
-                const mappedEvents: EventItem[] = docs.map((event: any, index: number) => ({
-                    id: String(event.id),
-                    title: event.title,
-                    info: event.info,
-                    imageUrl: eventData[index % eventData.length]?.imageUrl || '', 
-                    linkUrl: `/events/${ event.id }`,
-                }))
+                const mappedEvents: EventItem[] = docs.map((event: any, index: number) => {
+                    let imageUrl = ''
+                    if (event.image) {
+                        imageUrl = typeof event.image === 'string' 
+                            ? event.image 
+                            : event.image.url || ''
+                    }
+
+                    if (!imageUrl) {
+                        imageUrl = '/images/event1.jpg'
+                    }
+
+                    return {
+                        id: String(event.id),
+                        title: event.title,
+                        info: event.info,
+                        imageUrl: imageUrl,
+                        linkUrl: `/events-details/${event.id}`,
+                    }
+                })
 
                 setEventsData(mappedEvents)
             } catch (err) {
