@@ -12,18 +12,9 @@ export default async function AboutUsPage() {
   // build a safe base URL (fallback to localhost for local dev)
   const base = process.env.NEXT_PUBLIC_PAYLOAD_URL ?? 'http://localhost:3000'
 
-  let execs: any[] = []
-  try {
-    const url = new URL('/api/execs', base).toString()
-    const res = await fetch(url, { cache: 'no-store' })
-    if (!res.ok) {
-      throw new Error(`Fetch failed: ${res.status} ${res.statusText}`)
-    }
-    const data = await res.json()
-    execs = data?.docs ?? []
-  } catch (err) {
-    console.error('Failed to fetch execs:', err)
-  }
+  const res = await fetch(`${process.env.NEXT_PUBLIC_PAYLOAD_URL}/api/execs?limit=25`, { cache: 'no-store' })
+  const data = await res.json()
+  const execs = data.docs
 
 
   if (!execs || execs.length === 0) return <div>Loading execs...</div>

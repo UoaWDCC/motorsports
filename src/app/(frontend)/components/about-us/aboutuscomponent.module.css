@@ -12,11 +12,12 @@
 }
 
 .execsRow {
+    width: 80%;
     padding:10px 0;
     justify-content: center;
     display: flex;
     flex-wrap:wrap;
-    gap:10px;
+    gap:20px;
 }
 
 .execsCard {
@@ -97,20 +98,20 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1400px) {
     .execsCard {
         flex: 1 1 calc(33% - 20px);
         max-width: calc(33% - 20px);
     }
 }
-@media (max-width: 700px) {
+@media (max-width: 1024px) {
     .execsCard {
         flex: 1 1 calc(50% - 20px);
         max-width: calc(50% - 20px);
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 768px) {
     .execsCard {
         flex: 1 1 calc(100% - 20px);
         max-width: calc(100% - 20px);

@@ -43,6 +43,10 @@ export default function Navbar() {
             About Us
           </Link>
 
+          <Link href="/leaderboard" className="nav-button">
+            Leaderboards
+          </Link>
+
           {showExtraButtons && (
             <>
               <Link href="/volunteers" className="nav-button">
