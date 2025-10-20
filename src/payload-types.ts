@@ -197,10 +197,6 @@ export interface Sponsor {
   id: string;
   name: string;
   logo?: (string | null) | Media;
-  /**
-   * Sort priority (range 1–5, smaller numbers appear first)
-   */
-  order: '1' | '2' | '3' | '4' | '5';
   updatedAt: string;
   createdAt: string;
 }
@@ -342,7 +338,6 @@ export interface ExecsSelect<T extends boolean = true> {
 export interface SponsorsSelect<T extends boolean = true> {
   name?: T;
   logo?: T;
-  order?: T;
   updatedAt?: T;
   createdAt?: T;
 }
