@@ -3,7 +3,7 @@ import './Volunteer.css';
 import VolunteerBlock from './VolunteerBlock';
 
 
-export default function Volunteer(){
+export default async function Volunteer(){
     return(
         <section className="volunteer-section">
             <div className='volunteer-container'>

@@ -71,6 +71,7 @@ export interface Config {
     media: Media;
     events: Event;
     execs: Exec;
+    sponsors: Sponsor;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -81,6 +82,7 @@ export interface Config {
     media: MediaSelect<false> | MediaSelect<true>;
     events: EventsSelect<false> | EventsSelect<true>;
     execs: ExecsSelect<false> | ExecsSelect<true>;
+    sponsors: SponsorsSelect<false> | SponsorsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -165,6 +167,8 @@ export interface Event {
   dateEnd: string;
   location: string;
   formUrl?: string | null;
+  image: string | Media;
+  linkUrl?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -182,6 +186,17 @@ export interface Exec {
    * Sort priority (range 1–5, smaller numbers appear first)
    */
   order: '1' | '2' | '3' | '4' | '5';
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "sponsors".
+ */
+export interface Sponsor {
+  id: string;
+  name: string;
+  logo?: (string | null) | Media;
   updatedAt: string;
   createdAt: string;
 }
@@ -207,6 +222,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'execs';
         value: string | Exec;
+      } | null)
+    | ({
+        relationTo: 'sponsors';
+        value: string | Sponsor;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -294,6 +313,8 @@ export interface EventsSelect<T extends boolean = true> {
   dateEnd?: T;
   location?: T;
   formUrl?: T;
+  image?: T;
+  linkUrl?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -307,6 +328,16 @@ export interface ExecsSelect<T extends boolean = true> {
   team?: T;
   photo?: T;
   order?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "sponsors_select".
+ */
+export interface SponsorsSelect<T extends boolean = true> {
+  name?: T;
+  logo?: T;
   updatedAt?: T;
   createdAt?: T;
 }

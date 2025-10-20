@@ -1,6 +1,6 @@
 import ExecsSection from '../components/about-us/ExecsSection'
 import Description from '../components/about-us/Description'
-import {fakeDescription } from '../data/execs'
+import { fakeDescription } from '../data/execs'
 import '../styles.css'
 import Image from 'next/image'
 import type { Metadata } from 'next'
@@ -9,14 +9,17 @@ export const metadata: Metadata = {
 }
 
 export default async function AboutUsPage() {
+  // build a safe base URL (fallback to localhost for local dev)
+  const base = process.env.NEXT_PUBLIC_PAYLOAD_URL ?? 'http://localhost:3000'
 
   const res = await fetch(`${process.env.NEXT_PUBLIC_PAYLOAD_URL}/api/execs?limit=25`, { cache: 'no-store' })
   const data = await res.json()
   const execs = data.docs
 
-  if (!execs) return <div>Loading execs...</div>
 
-   // Filter execs by team
+  if (!execs || execs.length === 0) return <div>Loading execs...</div>
+
+  // Filter execs by team
   const leadershipExecs = execs.filter((exec: any) => exec.team === 'leadership')
   const socialExecs = execs.filter((exec: any) => exec.team === 'social')
   const competitiveExecs = execs.filter((exec: any) => exec.team === 'competitive')

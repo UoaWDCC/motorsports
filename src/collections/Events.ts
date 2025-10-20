@@ -49,6 +49,17 @@ export const Events: CollectionConfig = {
       type: 'text',
       required: false,
     },
+    {
+      name: 'image',
+      type: 'upload',
+      relationTo: 'media',
+      required: true,
+    },
+    {
+      name: 'linkUrl',
+      type: 'text',
+      required: false,
+    },
   ],
 }
 export default Events
